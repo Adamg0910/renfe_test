@@ -64,18 +64,21 @@ test.describe('Renfe ticket booking', () => {
         await resultPage.selectTicket(selectedTicket);
 
         //Extracr and ticket infos
-        const ticketDetails = await resultPage.extractTicketInfo(selectedTicket);
+        const ticketDetails = await resultPage.extractTicketDetails(selectedTicket);
         console.log(`Selected ticket- PRice ${ticketDetails.price}, Duration: ${ticketDetails.duration}`);
 
-        //Step 4: On fare selection page, select basic fare
-        await fareSelectionPage.selectTicket(selectedTicket);
-
+        //Step 4:select basic fare
         //Verify basic fare is displayed
-        const isBasicFareVisible = await fareSelectionPage.isBasicFareVisible();
+        const isBasicFareVisible = await resultPage.isBasicFareVisible();
         expect(isBasicFareVisible).toBeTruthy();
-
+        //await resultPage.isBasicFareVisible();
+        await resultPage.clickBasicFare();
         //Step6 : Click continue to go to passenger details page
-        await fareSelectionPage.clickContinueButton();
+        await resultPage.clickContinueButton();
+
+        //handle fare uprgrade
+        await resultPage.isPromoUpFieldVisible();
+
 
         //Setep 7: Verify user is on passenger details page
         const isPassengetPageLoaded = await passengerDetailsPage.isPassengerDetailsLoaded();

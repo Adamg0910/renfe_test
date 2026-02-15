@@ -21,7 +21,7 @@ export class PassengerDetailsPage extends BasePage {
      */
     async isPassengerDetailsPageLoaded() {
         try {
-            await this.pageTitle.waitForSelector(this.pageTitle,{ timeout: 5000 });
+            await this.pageTitle.waitFor({ timeout: 5000 });
             return true;
         } catch {
             return false;
