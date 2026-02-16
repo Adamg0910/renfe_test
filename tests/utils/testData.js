@@ -22,6 +22,9 @@ export const TEST_DATA = {
     FARE_TYPE : 'basic',
 };
 
+// Export BASE_URL separately for backward compatibility
+export const BASE_URL = TEST_DATA.BASE_URL;
+
 /** Wait for element with retry logic
 * @param {Page} page - Playwright Page object
 * @param {string} selector - CSS selector

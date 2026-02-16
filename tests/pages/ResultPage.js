@@ -1,7 +1,7 @@
 /**
  * Reuslt Page Object
  */
-import  {BasePage} from './BasePage';
+import  {BasePage} from './BasePage.js';
 
 export class ResultPage extends BasePage {
     // Locators

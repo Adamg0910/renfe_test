@@ -1,10 +1,10 @@
 import {test, expect} from '@playwright/test';
-import { BASE_URL } from './utils/testData';
-import {HomePage} from './pages/HomePage';
-import {ResultPage} from './pages/ResultPage';
-import {FareSelectionPage} from './pages/FareSelectionPage';
-import {PassengerDetailsPage} from './pages/PassengerDetailsPage';
-import { getFutureDate, TEST_DATA } from './utils/testData';
+import { BASE_URL } from './utils/testData.js';
+import {HomePage} from './pages/HomePage.js';
+import {ResultPage} from './pages/ResultPage.js';
+import {FareSelectionPage} from './pages/FareSelectionPage.js';
+import {PassengerDetailsPage} from './pages/PassengerDetailsPage.js';
+import { getFutureDate, TEST_DATA } from './utils/testData.js';
 
 test.describe('Renfe ticket booking', () => {
     let homePage;

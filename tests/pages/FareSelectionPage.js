@@ -1,7 +1,7 @@
 /**
  * Fare selection page object model
  */
-import { BasePage } from "./BasePage";
+import { BasePage } from "./BasePage.js";
  
 export class FareSelectionPage extends BasePage {
     // Locators
