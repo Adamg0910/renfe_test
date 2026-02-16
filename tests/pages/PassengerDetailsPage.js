@@ -34,7 +34,7 @@ export class PassengerDetailsPage extends BasePage {
      * @returns {Promise<boolean>}
      */
     async isPassengerDetailsLoaded() {
-        return await this.isPassengerDetailsPageLoaded();
+        return this.isPassengerDetailsPageLoaded();
     }
     
     /** Check title of the passenger details page 
