@@ -26,11 +26,11 @@ test.describe('Renfe ticket booking', () => {
         await homePage.waitForPageToLoad();
      
     });
-    test('Purchase one-way ticket from Madrid_Atocha to Barcelona-Sants with basic fare', async()=> {
-        //Step 1: Search for one way trip and select
+    test('Purchase one-way ticket from Madrid-Atocha to Barcelona-Sants with basic fare', async()=> {
+        //Step 1: Select one-way journey and enter stations
         await homePage.selectOneWayJourney();
 
-        //Fill origigin station
+        //Fill origin station
         await homePage.fillOriginStation(TEST_DATA.ORIGINAL_STATION);
         await homePage.selectFromDropdown('Madrid-Atocha Cercanías');
 
@@ -38,50 +38,46 @@ test.describe('Renfe ticket booking', () => {
         await homePage.fillDestinationStation(TEST_DATA.DESTINATION_STATION);
         await homePage.selectFromDropdown('Barcelona-Sants');
 
-        //Set departure date (7 days from now)
-        // const departureDate = getFutureDate(7);
-        // await homePage.setDepartureDate(departureDate);
+        //Note: Departure date is auto-selected by the website
 
         //Click search button
         await homePage.clickSearchButton();
 
-        //Step 2: Verify results and select first option
-        //REsults should show journey time and price for each ticket
+        //Step 2: Verify results and select ticket
+        //Results should show journey time and price for each ticket
         await resultPage.checkResultsLoaded();
         await resultPage.waitForResultsToLoad();
-        //expect(isResultsLoaded).toBeTruthy();
         let tickets = await resultPage.findAvailableTickets();
         if (tickets === 0) {
             await resultPage.getMiddleDayDate.click();
-            // Optionally, wait for results to reload
+            // Wait for results to reload
             tickets = await resultPage.findAvailableTickets();
         }
         expect(tickets).toBeGreaterThan(0);
 
-        //Step 3: Select first ticket within price range
+        //Step 3: Select ticket within price range (€50-60)
         const selectedTicket = await resultPage.findTicketWithinPriceRange(TEST_DATA.MIN_PRICE, TEST_DATA.MAX_PRICE);
         expect(selectedTicket).not.toBeNull();
         await resultPage.selectTicket(selectedTicket);
 
-        //Extracr and ticket infos
+        //Extract and log ticket information
         const ticketDetails = await resultPage.extractTicketDetails(selectedTicket);
-        console.log(`Selected ticket- PRice ${ticketDetails.price}, Duration: ${ticketDetails.duration}`);
+        console.log(`Selected ticket - Price: €${ticketDetails.price}, Duration: ${ticketDetails.duration}`);
 
-        //Step 4:select basic fare
+        //Step 4: Select basic fare
         //Verify basic fare is displayed
         const isBasicFareVisible = await resultPage.isBasicFareVisible();
         expect(isBasicFareVisible).toBeTruthy();
-        //await resultPage.isBasicFareVisible();
         await resultPage.clickBasicFare();
-        //Step6 : Click continue to go to passenger details page
+        
+        //Step 5: Click continue to go to passenger details page
         await resultPage.clickContinueButton();
 
-        //handle fare uprgrade
+        //Step 6: Handle fare upgrade popup if it appears
         await resultPage.isPromoUpFieldVisible();
 
-
-        //Setep 7: Verify user is on passenger details page
-        const isPassengetPageLoaded = await passengerDetailsPage.isPassengerDetailsLoaded();
-        expect(isPassengetPageLoaded).toBeTruthy();
+        //Step 7: Verify user is on passenger details page
+        const isPassengerPageLoaded = await passengerDetailsPage.isPassengerDetailsLoaded();
+        expect(isPassengerPageLoaded).toBeTruthy();
     });
 })
