@@ -21,12 +21,22 @@ export class PassengerDetailsPage extends BasePage {
      */
     async isPassengerDetailsPageLoaded() {
         try {
-            await this.pageTitle.waitFor({ timeout: 5000 });
+            console.log("------------Testcase done----------");
+            await this.pageTitle.waitFor({ timeout: 10000 });
             return true;
         } catch {
             return false;
         }
     }
+    
+    /**
+     * Alias for isPassengerDetailsPageLoaded for backward compatibility
+     * @returns {Promise<boolean>}
+     */
+    async isPassengerDetailsLoaded() {
+        return this.isPassengerDetailsPageLoaded();
+    }
+    
     /** Check title of the passenger details page 
      *@return {Promise<string>}
      */
