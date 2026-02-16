@@ -1,0 +1,11 @@
+# Selenium WebDriver for browser automation
+selenium==4.27.1
+
+# Pytest testing framework
+pytest==8.3.4
+
+# WebDriver Manager for automatic driver management
+webdriver-manager==4.0.2
+
+# Additional useful packages
+pytest-html==4.1.1  # HTML test reports
