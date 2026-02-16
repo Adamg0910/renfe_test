@@ -1,5 +1,5 @@
 /**
- * Reuslt Page Object
+ * Result Page Object
  */
 import  {BasePage} from './BasePage.js';
 
