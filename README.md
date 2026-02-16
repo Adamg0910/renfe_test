@@ -3,6 +3,13 @@
 ## ⚠️ Important: This is a Python Project
 This repository contains a **Python + Selenium** automation project. If you're looking for the JavaScript/Playwright version, please switch to a different branch.
 
+## 🚨 Getting "requirements.txt not found" error?
+**You need to pull the latest changes!** This repository was recently updated. Run:
+```bash
+git pull origin copilot/create-automation-project
+```
+See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed help.
+
 ## Overview
 This is a front-end automation testing project for the RENFE train ticket booking system. The project uses **Selenium WebDriver** with **Python** and follows the **Page Object Model (POM)** design pattern for maintainability and scalability.
 
@@ -24,6 +31,8 @@ The automated test validates the complete flow of purchasing a one-way train tic
 - Python 3.7 or higher
 - pip (Python package manager)
 - Chrome browser installed
+
+> **🔧 Having issues?** Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to common problems like "requirements.txt not found" or "npm install errors".
 
 ### Step 1: Install Dependencies
 ```bash
@@ -158,7 +167,24 @@ The project uses **explicit waits** for reliability:
 
 ## Troubleshooting
 
-### Common Issues
+> **📖 For comprehensive troubleshooting, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md)**
+
+This guide covers:
+- ❌ "requirements.txt not found" errors
+- ❌ "npm install" errors  
+- ❌ Git/repository sync issues
+- ❌ Python/pip installation problems
+- ❌ ChromeDriver issues
+- ❌ And many more common problems
+
+### Quick Common Issues
+
+**Issue**: `ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'`
+**Solution**: Pull the latest repository changes:
+```bash
+git pull origin copilot/create-automation-project
+```
+Then verify: `ls requirements.txt` (Linux/Mac) or `dir requirements.txt` (Windows)
 
 **Issue**: `ModuleNotFoundError: No module named 'selenium'`
 **Solution**: Run `pip install -r requirements.txt`
