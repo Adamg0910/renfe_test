@@ -131,6 +131,8 @@ renfe_test/
 - Node.js v16 or higher
 - npm v8 or higher
 - Git
+- **Internet connectivity** to https://www.renfe.com
+- **No firewall/proxy blocking** the RENFE website
 
 ### Step 1: Clone the Repository
 ```bash
@@ -149,6 +151,14 @@ npx playwright install
 ```
 
 ## Running Tests
+
+### Important Note
+This project is designed to test the actual RENFE website (https://www.renfe.com/es/es). Ensure you have:
+- A stable internet connection
+- Access to the RENFE website (not blocked by firewall/proxy)
+- The website structure hasn't significantly changed
+
+If running in a restricted environment where external websites are blocked, the tests will fail with `ERR_NAME_NOT_RESOLVED`. This is expected and not a code issue.
 
 ### Run All Tests (Headless Mode)
 ```bash
@@ -252,6 +262,14 @@ git push -u origin main
 ## Troubleshooting
 
 ### Common Issues
+
+**Issue**: ERR_NAME_NOT_RESOLVED or cannot reach RENFE website
+**Solution**: 
+- Check your internet connection
+- Verify the website is accessible in your browser
+- Check if your firewall or proxy is blocking access
+- Try accessing https://www.renfe.com/es/es directly
+- If in a corporate/restricted environment, request access to the domain
 
 **Issue**: Module import errors
 **Solution**: Ensure `package.json` has `"type": "module"`
