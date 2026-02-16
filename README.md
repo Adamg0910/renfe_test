@@ -1,98 +1,128 @@
-# RENFE Automation Test Project
+# RENFE Automation Test Project - Python + Selenium
+
+## ⚠️ Important: This is a Python Project
+This repository contains a **Python + Selenium** automation project. If you're looking for the JavaScript/Playwright version, please switch to a different branch.
 
 ## Overview
-This is a front-end automation testing project for the RENFE train ticket booking system. The project uses Playwright framework with JavaScript and follows the Page Object Model (POM) design pattern for maintainability and scalability.
+This is a front-end automation testing project for the RENFE train ticket booking system. The project uses **Selenium WebDriver** with **Python** and follows the **Page Object Model (POM)** design pattern for maintainability and scalability.
 
 ## Project Information
-- **Framework**: Playwright
-- **Language**: JavaScript (ES6+)
+- **Framework**: Selenium WebDriver 4.27.1
+- **Test Runner**: Pytest 8.3.4
+- **Language**: Python 3.x
 - **Design Pattern**: Page Object Model (POM)
-- **Repository**: Git-based version control
+- **WebDriver Management**: Automatic (webdriver-manager)
 
 ## Business Scenario
 **Purchase a One-Way Train Ticket from Madrid to Barcelona**
 
 The automated test validates the complete flow of purchasing a one-way train ticket from Madrid-Atocha station to Barcelona-Sants station on the RENFE website.
 
-## Test Case: Purchase One-Way Ticket with Basic Fare
+## Installation & Setup
 
-### Objective
-Verify that a user can successfully search for and select a one-way train ticket from Madrid-Atocha to Barcelona-Sants with a basic fare in the price range of €50-60.
+### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
+- Chrome browser installed
 
-### Preconditions
-- Navigate to https://www.renfe.com/es/es
-- Accept cookie consent if displayed
-- Ensure the search form is fully loaded
+### Step 1: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+This will install:
+- `selenium` - WebDriver for browser automation
+- `pytest` - Testing framework
+- `webdriver-manager` - Automatic ChromeDriver management
+- `pytest-html` - HTML test reports
+
+### Step 2: Verify Installation
+```bash
+python --version
+pip list | grep -E "(selenium|pytest)"
+```
+
+## Running Tests
+
+### Run All Tests
+```bash
+pytest tests/test_renfe.py -v
+```
+
+### Run with Detailed Logging
+```bash
+pytest tests/test_renfe.py -v -s
+```
+
+### Run Specific Test Markers
+```bash
+# Run smoke tests
+pytest -m smoke tests/
+
+# Run booking tests
+pytest -m booking tests/
+```
+
+### Generate HTML Report
+```bash
+pytest tests/test_renfe.py --html=reports/report.html --self-contained-html
+```
+
+### Run in Headed Mode (Visible Browser)
+To see the browser during test execution, modify `tests/conftest.py` and comment out the `--headless` option in the Chrome options.
+
+## Project Structure
+
+```
+renfe_test/
+├── requirements.txt          # Python dependencies
+├── pytest.ini                # Pytest configuration
+├── README.md                 # This file
+├── SETUP.md                  # Detailed setup guide
+├── TEST_CASE.md              # Detailed test case documentation
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py          # Pytest fixtures (WebDriver setup)
+│   ├── test_renfe.py        # Main test specification
+│   ├── pages/               # Page Object Model classes
+│   │   ├── __init__.py
+│   │   ├── base_page.py              # Base page with common methods
+│   │   ├── home_page.py              # Homepage interactions
+│   │   ├── result_page.py            # Search results & ticket selection
+│   │   ├── passenger_details_page.py # Passenger details verification
+│   │   └── fare_selection_page.py    # Fare selection
+│   └── utils/
+│       ├── __init__.py
+│       └── test_data.py              # Test data and constants
+```
+
+## Test Case Details
+
+### Test Name
+**Purchase a one-way ticket from Madrid-Atocha to Barcelona-Sants with basic fare**
 
 ### Test Steps
 
-1. **Navigate to RENFE Homepage**
-   - Open https://www.renfe.com/es/es
-   - Verify page loads successfully
-   - Accept cookie consent banner
-
-2. **Select Journey Type**
-   - Click on the departure date input field
-   - Select "One-way" (Viaje solo ida) journey option
-   - Verify one-way option is selected
-
-3. **Enter Origin Station**
-   - Fill origin station field with "Madrid-Atocha Cercanías"
-   - Wait for dropdown suggestions to appear
-   - Select "Madrid-Atocha Cercanías" from the dropdown
-
-4. **Enter Destination Station**
-   - Fill destination station field with "Barcelona-Sants"
-   - Wait for dropdown suggestions to appear
-   - Select "Barcelona-Sants" from the dropdown
-
-5. **Departure Date**
-   - The system automatically selects an available date
-   - Date is chosen to ensure ticket availability
-
-6. **Search for Tickets**
-   - Click the search button
-   - Wait for search results to load
-
-7. **Verify Search Results**
-   - Verify search results page displays
-   - Confirm each result shows:
-     - Journey time/duration
-     - Price information
-   - Verify at least one ticket is available
-
-8. **Select Ticket Within Price Range**
-   - Find tickets with price between €50-60
-   - Verify ticket is within the specified price range
-   - Click to select the ticket
-   - Log ticket details (price and duration)
-
-9. **Select Basic Fare**
-   - Verify "Basic" (Básico) fare option is visible
-   - Click on "Basic" fare option
-   - Verify basic fare is selected
-
-10. **Continue to Next Step**
-    - Click "Continue" or "Select" button
-    - Wait for page navigation
-
-11. **Handle Fare Upgrade Popup (if appears)**
-    - If fare upgrade promotion popup appears
-    - Confirm to continue with basic fare
-    - Close the popup
-
-12. **Verify Passenger Details Page**
-    - Verify redirection to Passenger Details page
-    - Confirm page title or key elements are visible
-    - Test completes successfully
+1. ✓ Navigate to RENFE homepage (https://www.renfe.com/es/es)
+2. ✓ Accept cookies (if banner appears)
+3. ✓ Select "One-way" journey type
+4. ✓ Enter origin station: Madrid-Atocha Cercanías
+5. ✓ Enter destination station: Barcelona-Sants
+6. ✓ Click search button
+7. ✓ Verify search results display journey time and price
+8. ✓ Find ticket with price between €50-60
+9. ✓ Select the ticket
+10. ✓ Verify "Basic" fare option is visible
+11. ✓ Select basic fare
+12. ✓ Click continue button
+13. ✓ Handle fare upgrade popup (if appears)
+14. ✓ Verify user is redirected to Passenger Details page
 
 ### Expected Results
-- User successfully navigates through each step
-- Ticket search returns available trains with prices and journey times
+- Search returns available trains with prices and journey times
 - Selected ticket is within €50-60 price range
 - Basic fare option is available and selectable
-- User advances to Passenger Details page
-- Test passes without errors
+- User successfully advances to Passenger Details page
 
 ### Test Data
 | Field | Value |
@@ -104,242 +134,93 @@ Verify that a user can successfully search for and select a one-way train ticket
 | Maximum Price | €60 |
 | Fare Type | Basic (Básico) |
 
-## Project Structure
+## Code Quality & Design
 
-```
-renfe_test/
-├── tests/
-│   ├── pages/                     # Page Object Models
-│   │   ├── BasePage.js           # Base class with common methods
-│   │   ├── HomePage.js           # RENFE homepage interactions
-│   │   ├── ResultPage.js         # Search results page interactions
-│   │   ├── FareSelectionPage.js  # Fare selection popup interactions
-│   │   └── PassengerDetailsPage.js # Passenger details page validation
-│   ├── utils/
-│   │   └── testData.js           # Test data and utility functions
-│   └── renfe.spec.js             # Main test specification
-├── playwright.config.js          # Playwright configuration
-├── package.json                  # Project dependencies and scripts
-├── .gitignore                    # Git ignore patterns
-├── README.md                     # This file
-└── SETUP.md                      # Detailed setup and execution guide
-```
-
-## Installation
-
-### Prerequisites
-- Node.js v16 or higher
-- npm v8 or higher
-- Git
-- **Internet connectivity** to https://www.renfe.com
-- **No firewall/proxy blocking** the RENFE website
-
-### Step 1: Clone the Repository
-```bash
-git clone <repository-url>
-cd renfe_test
-```
-
-### Step 2: Install Dependencies
-```bash
-npm install
-```
-
-### Step 3: Install Playwright Browsers
-```bash
-npx playwright install
-```
-
-## Running Tests
-
-### Important Note
-This project is designed to test the actual RENFE website (https://www.renfe.com/es/es). Ensure you have:
-- A stable internet connection
-- Access to the RENFE website (not blocked by firewall/proxy)
-- The website structure hasn't significantly changed
-
-If running in a restricted environment where external websites are blocked, the tests will fail with `ERR_NAME_NOT_RESOLVED`. This is expected and not a code issue.
-
-### Run All Tests (Headless Mode)
-```bash
-npm test
-```
-
-### Run Tests with UI Mode (Interactive Dashboard)
-```bash
-npm run test:ui
-```
-
-### Run Tests in Headed Mode (Visible Browser)
-```bash
-npm run test:headed
-```
-
-### Run Tests in Debug Mode
-```bash
-npm run test:debug
-```
-
-### View HTML Test Report
-```bash
-npm run test:report
-```
-
-## Code Quality & Best Practices
-
-### Design Patterns
-- **Page Object Model (POM)**: Each page has a corresponding class encapsulating page elements and actions
-- **DRY Principle**: Common functionality is abstracted in BasePage class
-- **Single Responsibility**: Each page object handles only its own page interactions
-
-### Code Organization
-- **Modular Structure**: Clear separation between pages, tests, and utilities
-- **Descriptive Naming**: Clear, self-documenting variable and method names
-- **JSDoc Comments**: Comprehensive documentation for all public methods
+### Page Object Model (POM)
+Each page of the application has a corresponding page object class:
+- **BasePage**: Common methods (click, fill, wait_for_element)
+- **HomePage**: Homepage interactions (search form, station selection)
+- **ResultPage**: Ticket extraction, price filtering, selection
+- **FareSelectionPage**: Fare type handling
+- **PassengerDetailsPage**: Final page validation
 
 ### Wait Strategies
-- **Explicit Waits**: Using `waitForSelector()` and `waitForLoadState()`
-- **No Hard-coded Sleeps**: Avoiding `setTimeout()` in favor of proper wait conditions
-- **Network Idle Waits**: Ensuring page is fully loaded before interactions
+The project uses **explicit waits** for reliability:
+- `WebDriverWait` with `expected_conditions`
+- `wait_for_element()` - Wait for element visibility
+- `wait_for_element_clickable()` - Wait for element to be clickable
+- `wait_for_page_load()` - Wait for page to fully load
+- **NO hard-coded sleep/delays** except minimal waits for page stability
 
-### Data Management
-- **Centralized Test Data**: All test constants in `testData.js`
-- **No Hard-coded Values**: Using constants for maintainability
-- **Utility Functions**: Reusable helper functions for date manipulation
-
-### Error Handling
-- **Graceful Failures**: Try-catch blocks for optional elements (e.g., cookie banner)
-- **Retry Logic**: Multiple attempts for dynamic content loading
-- **Clear Error Messages**: Descriptive error messages for debugging
-
-## Scalability Features
-
-1. **Easy Test Addition**: New test cases can reuse existing page objects
-2. **Browser Coverage**: Supports Chromium, Firefox, and WebKit
-3. **Parallel Execution**: Tests can run in parallel for faster execution
-4. **Configurable Timeouts**: Adjustable wait times in configuration
-5. **Cross-browser Testing**: Same tests run on multiple browsers
-
-## Maintainability Features
-
-1. **Single Point of Change**: Selector changes only need updating in page objects
-2. **Inheritance**: New page objects can extend BasePage
-3. **Clear Documentation**: Inline comments and external documentation
-4. **Version Control**: Git tracking for all changes
-5. **Consistent Coding Style**: Following JavaScript best practices
-
-## Git Workflow
-
-### Initial Setup
-```bash
-git init
-git add .
-git commit -m "Initial commit: RENFE automation project"
-git remote add origin <your-repository-url>
-git push -u origin main
-```
-
-### Recommended Branching Strategy
-- `main`: Production-ready code
-- `feature/*`: New test cases or features
-- `bugfix/*`: Bug fixes and corrections
-
-### Commit Message Guidelines
-- Use clear, descriptive commit messages
-- Start with a verb (Add, Update, Fix, Remove)
-- Reference issue numbers when applicable
-
-## Configuration
-
-### Playwright Configuration (`playwright.config.js`)
-- **testDir**: `./tests` - Location of test files
-- **fullyParallel**: `true` - Enable parallel test execution
-- **reporter**: `html` - HTML test report generation
-- **baseURL**: `https://www.renfe.com/es/es` - RENFE website base URL
-- **trace**: `on` - Capture execution traces
-- **screenshot**: `only-on-failure` - Screenshots on test failure
+### Fixtures (conftest.py)
+- `driver` - Headless Chrome WebDriver with automatic cleanup
+- `driver_headed` - Visible Chrome WebDriver for debugging
 
 ## Troubleshooting
 
 ### Common Issues
 
-**Issue**: ERR_NAME_NOT_RESOLVED or cannot reach RENFE website
+**Issue**: `ModuleNotFoundError: No module named 'selenium'`
+**Solution**: Run `pip install -r requirements.txt`
+
+**Issue**: ChromeDriver version mismatch
+**Solution**: The project uses `webdriver-manager` which automatically downloads the correct ChromeDriver version
+
+**Issue**: `ERR_NAME_NOT_RESOLVED` or cannot reach RENFE website
 **Solution**: 
 - Check your internet connection
 - Verify the website is accessible in your browser
-- Check if your firewall or proxy is blocking access
-- Try accessing https://www.renfe.com/es/es directly
-- If in a corporate/restricted environment, request access to the domain
-
-**Issue**: Module import errors
-**Solution**: Ensure `package.json` has `"type": "module"`
-
-**Issue**: Browser not found
-**Solution**: Run `npx playwright install`
+- If behind a proxy, configure proxy settings
 
 **Issue**: Timeout errors
-**Solution**: Increase timeout values in `playwright.config.js` or check internet connection
+**Solution**: 
+- Increase timeout values in page objects if needed
+- Check if RENFE website structure has changed
+- Run in headed mode to see what's happening
 
-**Issue**: Selector not found
-**Solution**: RENFE website may have changed; update selectors in page objects
+**Issue**: "This is a JavaScript project" confusion
+**Solution**: This is a **Python** project. There is NO `package.json` or `npm install` needed. Use `pip install -r requirements.txt` instead.
 
-**Issue**: Cookie banner blocking interactions
-**Solution**: The test handles cookie acceptance automatically; check `HomePage.acceptCookies()`
+## Important Notes
 
-## Test Execution Duration
+### Network Requirements
+⚠️ This test requires internet access to https://www.renfe.com/es/es
 
-Expected test execution time: 30-60 seconds (depending on network speed and website responsiveness)
+In restricted environments where external websites are blocked, the tests will fail with network errors. This is expected and not a code issue.
 
-## Browser Support
+### Website Changes
+If the RENFE website structure changes, selectors in page objects may need updating.
 
-The tests are configured to run on:
-- Chromium (Google Chrome, Microsoft Edge)
-- Firefox (commented out by default)
-- WebKit (Safari) (commented out by default)
+## Pytest Configuration
 
-To enable additional browsers, uncomment them in `playwright.config.js`.
+### Markers
+- `@pytest.mark.smoke` - Quick smoke tests
+- `@pytest.mark.regression` - Full regression tests
+- `@pytest.mark.booking` - Ticket booking specific tests
 
-## Continuous Integration
+### Logging
+Tests include comprehensive logging at INFO level. Check console output for detailed test execution information.
 
-This project is ready for CI/CD integration. The configuration includes:
-- Retry logic on CI (`retries: 2`)
-- Single worker on CI to avoid rate limiting
-- Trace and screenshot capture on failures
+## CI/CD Ready
 
-## Documentation
-
-- **README.md**: Project overview and quick start (this file)
-- **SETUP.md**: Detailed setup and execution instructions
-- **Inline Comments**: Code documentation within test files
-- **JSDoc**: Method documentation in page objects
-
-## Evaluation Criteria Coverage
-
-✅ **Code Structure & Readability**: Clear POM structure with descriptive naming
-✅ **Maintainability**: Single point of change, inheritance, modular design
-✅ **Scalability**: Easy to add new tests and page objects
-✅ **Data Structures**: Proper use of objects, arrays, and constants
-✅ **Wait Strategies**: Explicit waits, no hard-coded delays
-✅ **Code Cleanliness**: Consistent formatting, proper comments, no dead code
-✅ **Git Usage**: Version control, clear commit history, proper .gitignore
-
-## Support
-
-For issues or questions:
-1. Check the SETUP.md file for detailed instructions
-2. Review Playwright documentation: https://playwright.dev
-3. Examine test execution traces and screenshots in `test-results/`
-4. Run tests in debug mode to step through execution
+This project is ready for CI/CD integration:
+- All dependencies managed via requirements.txt
+- Headless mode for CI environments
+- HTML report generation
+- Exit codes for pass/fail status
 
 ## License
-
 ISC
 
 ## Version
-
-1.0.0
+1.0.0 - Python/Selenium Implementation
 
 ---
 
-**Last Updated**: February 2026
-**Status**: Ready for interview submission
+**Need Help?**
+- Check `SETUP.md` for detailed setup instructions
+- Check `TEST_CASE.md` for complete test case documentation
+- Review `tests/test_renfe.py` for test implementation details
+
+**❌ DO NOT run `npm install`** - This is NOT a Node.js project!  
+**✅ USE `pip install -r requirements.txt`** - This is a Python project!
