@@ -7,7 +7,7 @@ export class ResultPage extends BasePage {
     // Locators
 get buttonAceptarConfirmacionFareUpgrade(){
     return this.page.locator("//p[@id='aceptarConfirmacionFareUpgrade']"); //confirm fare upgrade button in promo modal, adjust selector as needed based on actual page structure
-}
+    }
 
     get promoUpField(){
         return this.page.locator('//div[@class="modal-dialog modal-promoUp"]').first();
@@ -40,10 +40,14 @@ get buttonAceptarConfirmacionFareUpgrade(){
         return this.page.locator('//button[@id="btnSeleccionar"]').first(); //select button within ticket result, adjust selector as needed based on actual page structure
     }
 
-    //Check if the promo modal édialog is visible
+    //Check if the promo modal dialog is visible
     async isPromoUpFieldVisible() {
         if (await this.buttonAceptarConfirmacionFareUpgrade.isVisible()) {
+            await this.debugBeforeClick(this.buttonAceptarConfirmacionFareUpgrade, 'buttonAceptarConfirmacionFareUpgrade');
+            console.log("-----------Promo Field------------");
+            await this.buttonAceptarConfirmacionFareUpgrade.focus();
             await this.buttonAceptarConfirmacionFareUpgrade.click();
+            await this.page.waitForLoadState('networkidle');
         }
     }
 
@@ -54,7 +58,8 @@ get buttonAceptarConfirmacionFareUpgrade(){
     //Check there is any option
    async checkResultsLoaded() {
         if (await this.noDispoIda.isVisible()) {
-            await this.getMiddleDayDate.click(); // Ensure all network activity is complete
+            await this.getMiddleDayDate.click();
+
         }
     }
     async waitForResultsToLoad() {
@@ -225,6 +230,7 @@ get buttonAceptarConfirmacionFareUpgrade(){
     async clickContinueButton() {
         await this.selectButton.click();
         await this.page.waitForLoadState('networkidle');
+        await this.buttonAceptarConfirmacionFareUpgrade.waitFor({timeout: 10000});
     }
     
     

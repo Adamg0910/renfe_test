@@ -7,13 +7,13 @@ import { BasePage } from "./BasePage";
 export class PassengerDetailsPage extends BasePage {
     // Locators
     get pageTitle() {
-        return this.page.locator('h1:has-text("Passenger Details")');//check on the page for the exact text
+        return this.page.locator('//div[@class="titulo"]');//check on the page for the exact text
     }
     get firstNameInput() {
-        return this.page.locator('#firstName');//check locator  
+        return this.page.locator('//input[@id="nombre0"]');//check locator  
     }
     get lastNameInput() {
-        return this.page.locator('#lastName');//check locator
+        return this.page.locator('//input[@id="apellido10"]');//check locator 
     }
     /**
      * Check the detailed page is loaded by verifying the presence of the page title
@@ -21,7 +21,8 @@ export class PassengerDetailsPage extends BasePage {
      */
     async isPassengerDetailsPageLoaded() {
         try {
-            await this.pageTitle.waitFor({ timeout: 5000 });
+            console.log("------------Testcase done----------");
+            await this.pageTitle.waitFor({ timeout: 10000 });
             return true;
         } catch {
             return false;

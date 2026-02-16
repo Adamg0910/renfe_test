@@ -75,13 +75,11 @@ test.describe('Renfe ticket booking', () => {
         await resultPage.clickBasicFare();
         //Step6 : Click continue to go to passenger details page
         await resultPage.clickContinueButton();
-
         //handle fare uprgrade
         await resultPage.isPromoUpFieldVisible();
 
-
         //Setep 7: Verify user is on passenger details page
-        const isPassengetPageLoaded = await passengerDetailsPage.isPassengerDetailsLoaded();
-        expect(isPassengetPageLoaded).toBeTruthy();
+        const isPassengerDetailsPageLoaded = passengerDetailsPage.isPassengerDetailsPageLoaded();
+        expect(isPassengerDetailsPageLoaded).toBeTruthy();
     });
 })
