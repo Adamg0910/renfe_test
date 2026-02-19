@@ -80,6 +80,8 @@ test.describe('Renfe ticket booking', () => {
 
         //Setep 7: Verify user is on passenger details page
         const isPassengerDetailsPageLoaded = passengerDetailsPage.isPassengerDetailsPageLoaded();
+        await passengerDetailsPage.page.pause();
         expect(isPassengerDetailsPageLoaded).toBeTruthy();
+        
     });
 })

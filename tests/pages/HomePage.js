@@ -22,9 +22,9 @@ export class HomePage extends BasePage {
     get destinationStation() {
         return this.page.locator('//input[@id="destination"]');
     }
-    get departureDate() {//departure date input need ot resolve
-        return this.page.locator('//input[@class="rf-daterange-picker-alternative__input"]');//input[@class='rf-daterange-picker-alternative__ipt']
-    }
+    // get departureDate() {//departure date input need ot resolve
+    //     return this.page.locator('//input[@class="rf-daterange-picker-alternative__input"]');//input[@class='rf-daterange-picker-alternative__ipt']
+    // }
     get searchButton() {   
         return this.page.locator('//button[@type="submit"]');
     }

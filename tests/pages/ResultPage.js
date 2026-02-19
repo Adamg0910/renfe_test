@@ -96,14 +96,14 @@ get buttonAceptarConfirmacionFareUpgrade(){
         return await this.travelOptions.all()
     }
 
-    /**
-     * Check if any travel options exist on the page
-     * @returns {Promise<boolean>}
-     */
-    async hasAnyTravelOptions() {
-        const count = await this.travelOptions.count();
-        return count > 0;
-    }
+    // /**
+    //  * Check if any travel options exist on the page
+    //  * @returns {Promise<boolean>}
+    //  */
+    // async hasAnyTravelOptions() {
+    //     const count = await this.travelOptions.count();
+    //     return count > 0;
+    // }
     
     /**
      * Return count of available tickets with optional attribute details
@@ -168,12 +168,11 @@ get buttonAceptarConfirmacionFareUpgrade(){
                 priceText = await priceLocator.first().textContent();
             }
         }
-        /*
-        // If still no price, throw error
-        if (!priceText || priceText.trim() === "") {
-            await this.getMiddleDayDate.click();
-            await this.loadStateImg.waitFor({ state: 'hidden', timeout: 10000 }); 
-        }*/
+        // Commented: If still no price, throw error
+        // if (!priceText || priceText.trim() === "") {
+        //     await this.getMiddleDayDate.click();
+        //     await this.loadStateImg.waitFor({ state: 'hidden', timeout: 10000 }); 
+        // }
 
         // Extract numeric price from text
         const price = parseFloat(priceText.replace(/[^0-9,]/g, '').replace(',', '.'));
