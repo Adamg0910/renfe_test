@@ -155,7 +155,7 @@ export class HomePage extends BasePage {
         await this.selectFromDropdown('Madrid-Atocha Cercanías');
         await this.fillDestinationStation(destination);
         await this.selectFromDropdown('Barcelona-Sants');
-    //    await this.setDepartureDate(date);
+    //  await this.setDepartureDate(date);
         await this.clickSearchButton();
     }
 }

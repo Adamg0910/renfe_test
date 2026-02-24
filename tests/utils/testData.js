@@ -20,6 +20,14 @@ export const TEST_DATA = {
     MIN_PRICE : 50,
     MAX_PRICE : 60,
     FARE_TYPE : 'basic',
+    FAMILY_NAME : 'Smith',
+    FIRST_NAME : 'John',
+    DOCUMENT_TYPE : 'NIE',
+    DOCUMENT_NUMBER : '12345678A',
+    EMAIL_ADDRESS : 'abc@gmaiol.com',
+    PHONE_PREFIX : '+34',
+    PHONE_NUMBER : '987654321'
+
 };
 
 /** Wait for element with retry logic

@@ -37,10 +37,14 @@ export class BasePage{
                 }
 
                 /** Get text content of an element
-                 * @param {string} selector
+                 * @param {string|import('@playwright/test').Locator} selector
                  */
                 async getText(selector) {
-                    return await this.page.textContent(selector);
+                    if (typeof selector === 'string') {
+                        return await this.page.textContent(selector);
+                    }
+
+                    return await selector.textContent();
                 }
 
                 // Wait for navigation after an action
