@@ -41,6 +41,23 @@ export class PassengerDetailsPage extends BasePage {
     get summarizeContainer() {
         return this.page.locator('//div[@class="container sidebar-2"]');
     }
+    get passengerSelectDropdown() {
+        return this.page.locator('//button[@id="viajeroDatosExpandir0"]');
+    }
+    get passengerPersonalDetailsDroppdown() {
+        return this.page.locator('//div[@id="butonDatosPersonales0"]');
+    }
+    get passengerDetailsMasRenfecardDropdown() {
+        return this.page.locator('//div[@id="butonTarjetaRenfe0"]');
+    }
+    get passengerDetailsDiscountDropdown() {
+        return this.page.locator('//div[@id="butonDescuentos0"]');
+    }
+    get passengerDetailsAccessibilityDropdown() {
+        return this.page.locator('//div[@id="butonAccesibilidad0"]');
+    }
+
+
     /**
      * Check the detailed page is loaded by verifying the presence of the page title
      * @returns {Promise<boolean>}

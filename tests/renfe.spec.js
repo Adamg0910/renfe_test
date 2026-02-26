@@ -5,12 +5,14 @@ import {ResultPage} from './pages/ResultPage';
 import {FareSelectionPage} from './pages/FareSelectionPage';
 import {PassengerDetailsPage} from './pages/PassengerDetailsPage';
 import { getFutureDate, TEST_DATA } from './utils/testData';
+import { CustomiseTripPage } from './pages/CustomiseTrip';
 
 test.describe('Renfe ticket booking', () => {
     let homePage;
     let resultPage;
     let fareSelectionPage;
     let passengerDetailsPage;
+    let customiseTripPage;
 
     test.beforeEach(async({page})=>{
         //initialize all page objects
@@ -18,6 +20,7 @@ test.describe('Renfe ticket booking', () => {
         resultPage = new ResultPage(page);
         fareSelectionPage = new FareSelectionPage(page);
         passengerDetailsPage = new PassengerDetailsPage(page);
+        customiseTripPage = new CustomiseTripPage(page);
 
         //navigate to renfe
         await homePage.goto('https://www.renfe.com/es/es');
@@ -27,68 +30,60 @@ test.describe('Renfe ticket booking', () => {
      
     });
     test('Purchase one-way ticket from Madrid_Atocha to Barcelona-Sants with basic fare', async()=> {
-        //Step 1: Search for one way trip and select
-        await homePage.selectOneWayJourney();
+        
+        await test.step('Search for journey from Madrid to Barcelona', async () => {
+            await homePage.selectOneWayJourney();
+            await homePage.fillOriginStation(TEST_DATA.ORIGINAL_STATION);
+            await homePage.selectFromDropdown('Madrid-Atocha Cercanías');
+            await homePage.fillDestinationStation(TEST_DATA.DESTINATION_STATION);
+            await homePage.selectFromDropdown('Barcelona-Sants');
+            await homePage.clickSearchButton();
+        });
 
-        //Fill origigin station
-        await homePage.fillOriginStation(TEST_DATA.ORIGINAL_STATION);
-        await homePage.selectFromDropdown('Madrid-Atocha Cercanías');
+        let ticketDetails;
+        await test.step('Verify search results and select ticket', async () => {
+            await resultPage.checkResultsLoaded();
+            await resultPage.waitForResultsToLoad();
+            let tickets = await resultPage.findAvailableTickets();
+            if (tickets === 0) {
+                await resultPage.getMiddleDayDate.click();
+                tickets = await resultPage.findAvailableTickets();
+            }
+            expect(tickets).toBeGreaterThan(0);
+            
+            const selectedTicket = await resultPage.findTicketWithinPriceRange(TEST_DATA.MIN_PRICE, TEST_DATA.MAX_PRICE);
+            expect(selectedTicket).not.toBeNull();
+            await resultPage.selectTicket(selectedTicket);
+            
+            ticketDetails = await resultPage.extractTicketDetails(selectedTicket);
+            console.log(`Selected ticket- Price ${ticketDetails.price}, Duration: ${ticketDetails.duration}`);
+        });
 
-        //Fill destination station
-        await homePage.fillDestinationStation(TEST_DATA.DESTINATION_STATION);
-        await homePage.selectFromDropdown('Barcelona-Sants');
+        await test.step('Select basic fare and continue', async () => {
+            const isBasicFareVisible = await resultPage.isBasicFareVisible();
+            expect(isBasicFareVisible).toBeTruthy();
+            await resultPage.clickBasicFare();
+            await resultPage.clickContinueButton();
+            await resultPage.isPromoUpFieldVisible();
+        });
 
-        //Set departure date (7 days from now)
-        // const departureDate = getFutureDate(7);
-        // await homePage.setDepartureDate(departureDate);
-
-        //Click search button
-        await homePage.clickSearchButton();
-
-        //Step 2: Verify results and select first option
-        //REsults should show journey time and price for each ticket
-        await resultPage.checkResultsLoaded();
-        await resultPage.waitForResultsToLoad();
-        //expect(isResultsLoaded).toBeTruthy();
-        let tickets = await resultPage.findAvailableTickets();
-        if (tickets === 0) {
-            await resultPage.getMiddleDayDate.click();
-            // Optionally, wait for results to reload
-            tickets = await resultPage.findAvailableTickets();
-        }
-        expect(tickets).toBeGreaterThan(0);
-
-        //Step 3: Select first ticket within price range
-        const selectedTicket = await resultPage.findTicketWithinPriceRange(TEST_DATA.MIN_PRICE, TEST_DATA.MAX_PRICE);
-        expect(selectedTicket).not.toBeNull();
-        await resultPage.selectTicket(selectedTicket);
-
-        //Extracr and ticket infos
-        const ticketDetails = await resultPage.extractTicketDetails(selectedTicket);
-        console.log(`Selected ticket- PRice ${ticketDetails.price}, Duration: ${ticketDetails.duration}`);
-
-        //Step 4:select basic fare
-        //Verify basic fare is displayed
-        const isBasicFareVisible = await resultPage.isBasicFareVisible();
-        expect(isBasicFareVisible).toBeTruthy();
-        //await resultPage.isBasicFareVisible();
-        await resultPage.clickBasicFare();
-        //Step6 : Click continue to go to passenger details page
-        await resultPage.clickContinueButton();
-        //handle fare uprgrade
-        await resultPage.isPromoUpFieldVisible();
-
-        //Step 7: Verify user is on passenger details page
-        const isPassengerDetailsPageLoaded = await passengerDetailsPage.isPassengerDetailsPageLoaded();
-        expect(isPassengerDetailsPageLoaded).toBeTruthy();
-
-        //Step 8: Fill passenger details and verify summary 
-        await passengerDetailsPage.getPageTitle();
-        await passengerDetailsPage.getSummaryDetails();
-        await passengerDetailsPage.page.pause();
-        debugger;
-        await passengerDetailsPage.fillPassengerDetails();
-        await passengerDetailsPage.clickPersonalizarButton();
+        await test.step('Fill passenger details', async () => {
+            const isPassengerDetailsPageLoaded = await passengerDetailsPage.isPassengerDetailsPageLoaded();
+            expect(isPassengerDetailsPageLoaded).toBeTruthy();
+            
+            await passengerDetailsPage.getPageTitle();
+            await passengerDetailsPage.getSummaryDetails();
+            await passengerDetailsPage.fillPassengerDetails();
+            await passengerDetailsPage.clickPersonalizarButton();
+        });
+        
+        await test.step('Customize trip and proceed to payment', async () => {
+            const isCustomerTripPageLoaded = await customiseTripPage.isCustomiseTripPageLoaded();
+            expect(isCustomerTripPageLoaded).toBeTruthy();
+            await customiseTripPage.clickPaymentMethodsButton();
+            await customiseTripPage.page.pause();
+        });
+        //
         
     });
 })

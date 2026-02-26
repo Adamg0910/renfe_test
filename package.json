@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "allure:report": "allure generate --clean -o allure-report",
+    "allure:open": "allure open allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.58.1",
-    "@types/node": "^25.2.0"
+    "@types/node": "^25.2.0",
+    "allure-commandline": "^2.37.0",
+    "allure-playwright": "^3.5.0"
   }
 }

@@ -22,7 +22,7 @@ export const TEST_DATA = {
     FARE_TYPE : 'basic',
     FAMILY_NAME : 'Smith',
     FIRST_NAME : 'John',
-    DOCUMENT_TYPE : 'NIE',
+    DOCUMENT_TYPE : 'Pasaporte/Otro',
     DOCUMENT_NUMBER : '12345678A',
     EMAIL_ADDRESS : 'abc@gmaiol.com',
     PHONE_PREFIX : '+34',
