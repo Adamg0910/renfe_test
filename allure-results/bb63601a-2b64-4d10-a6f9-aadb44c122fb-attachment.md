@@ -1,0 +1,628 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e7]:
+      - generic [ref=e10]:
+        - link "Renfe" [active] [ref=e11] [cursor=pointer]:
+          - /url: https://www.renfe.com/es/es
+          - figure [ref=e12]:
+            - img "Inicio" [ref=e13]
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - generic [ref=e17]:
+              - button "Selector de idiomas" [ref=e18] [cursor=pointer]:
+                - generic [ref=e19]: 
+                - generic [ref=e20]: Castellano
+                - text: 
+              - text:  
+          - listitem [ref=e21]:
+            - generic [ref=e23]:
+              - button "" [ref=e24] [cursor=pointer]:
+                - generic [ref=e25]: 
+                - generic [ref=e26]: Buscar
+              - text:  
+          - listitem [ref=e27]:
+            - link " Ayuda" [ref=e28] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda
+              - generic [ref=e29]: 
+              - text: Ayuda
+          - listitem [ref=e30]:
+            - link "Login" [ref=e31] [cursor=pointer]:
+              - /url: https://venta.renfe.com/vol/loginCEX.do?Idioma=es&Pais=ES
+              - generic [ref=e32]: 
+              - generic [ref=e33]: Accede
+      - generic [ref=e34]:
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - generic [ref=e38]:
+              - generic [ref=e39] [cursor=pointer]: Cercanías 
+              - text:               
+          - listitem [ref=e40]:
+            - generic [ref=e43] [cursor=pointer]: Viaja 
+          - listitem [ref=e44]:
+            - generic [ref=e47] [cursor=pointer]: Inspírate 
+          - listitem [ref=e48]:
+            - generic [ref=e51] [cursor=pointer]: Gestiona tu billete 
+          - listitem [ref=e52]:
+            - link "Más Renfe" [ref=e53] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/programa-mas-renfe
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - generic [ref=e58] [cursor=pointer]: Grupo Renfe 
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic "Compra tu billete" [ref=e62]: Trenes al mejor precio
+          - link "Renfe Viajes" [ref=e63] [cursor=pointer]:
+            - /url: https://renfeviajes.renfe.com?utm_source=renfe&utm_medium=referral&utm_campaign=buscador
+        - generic [ref=e64]:
+          - heading "Compra billetes de tren" [level=2] [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e69]:
+                - generic [ref=e70]: Origen
+                - generic [ref=e72]:
+                  - combobox "Origen" [ref=e74]
+                  - status [ref=e75]: Introduzca 1 o más caracteres para mostrar resultados
+                  - text: 
+              - generic [ref=e77]:
+                - generic [ref=e78]:
+                  - generic [ref=e79]: 
+                  - text: Destino
+                - generic [ref=e80]:
+                  - combobox "Destino" [ref=e82]
+                  - status [ref=e83]: Introduzca 1 o más caracteres para mostrar resultados
+                  - text: 
+            - generic [ref=e88]:
+              - text: 
+              - generic [ref=e89]:
+                - generic [ref=e90]:
+                  - generic [ref=e91]:
+                    - generic: 
+                    - generic [ref=e92]: Fecha ida
+                  - generic: Viaje de ida y vuelta, para cambiar a viaje de sólo ida pulsar flecha hacia arriba. Para cambiar fechas usar las flechas de dirección izquierda y derecha
+                  - textbox "Fecha ida jueves, 26/02/2026" [ref=e93] [cursor=pointer]:
+                    - /placeholder: Fecha ida
+                    - text: jue., 26/02/26
+                - generic [ref=e94]:
+                  - generic [ref=e95]:
+                    - generic: 
+                    - generic [ref=e96]: Fecha vuelta
+                  - textbox "Fecha vuelta viernes, 27/02/2026" [ref=e97] [cursor=pointer]:
+                    - /placeholder: Fecha ida
+                    - text: vie., 27/02/26
+              - text:    
+            - generic [ref=e100] [cursor=pointer]:
+              - generic [ref=e101]:
+                - generic [ref=e102]:
+                  - generic [ref=e103]: 
+                  - text: Pasajeros
+                - button "1 adulto" [ref=e104]
+                - generic [ref=e105]: Selecciona los pasajeros que van a viajar
+              - text:      
+            - generic [ref=e106]:
+              - 'link "Saltar a: Código promocional" [ref=e107] [cursor=pointer]':
+                - /url: javascript:void(null)
+              - 'link "Saltar a: Más opciones de Viaje" [ref=e108] [cursor=pointer]':
+                - /url: javascript:void(null)
+            - generic [ref=e113]:
+              - button "Buscar billete" [disabled]: Buscar billete
+          - generic [ref=e115]:
+            - text: "%"
+            - button "¿Tienes un código promocional?" [ref=e116] [cursor=pointer]
+          - generic [ref=e117]:
+            - text: 
+            - generic [ref=e118]:
+              - button "Más opciones de búsqueda" [ref=e119] [cursor=pointer]:
+                - paragraph [ref=e120]: Más opciones de búsqueda
+              - generic [ref=e121] [cursor=pointer]: 
+          - text:           
+        - 'link "Saltar a: Buscar billete"':
+          - /url: javascript:void(null)
+    - generic [ref=e123]:
+      - text:  
+      - generic [ref=e125]:
+        - paragraph [ref=e126]
+        - paragraph [ref=e127]
+      - paragraph [ref=e137]:
+        - generic [ref=e138]: "Aviso:"
+        - text: Información importante para los afectados del accidente de tren de Adamuz.
+        - link "Ver más" [ref=e139] [cursor=pointer]:
+          - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros/seguro-de-viajeros
+      - generic [ref=e142]:
+        - generic "Carrusel":
+          - text: 
+          - button "Página siguiente del carrusel" [ref=e143] [cursor=pointer]
+        - generic "Selección de página del carrusel" [ref=e144]:
+          - button "Página del carrusel 1 Página actual del carrusel" [ref=e145] [cursor=pointer]
+          - button "Página del carrusel 2" [ref=e146] [cursor=pointer]
+          - button "Página del carrusel 3" [ref=e147] [cursor=pointer]
+          - button "Página del carrusel 4" [ref=e148] [cursor=pointer]
+        - generic [ref=e151]:
+          - link "¡NUEVO! Para trenes Avant Llega el nuevo Pase Vía, una suscripción trimestral gratuita que te permite viajar llegando a un 90% de descuento. Cuanto más viajas, más descuento. Más información" [ref=e157] [cursor=pointer]:
+            - /url: /es/es/viajar/prepara-tu-viaje/trenes-media-distancia-avant/abonos-media-distancia/avant/pase-via
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - text: ¡NUEVO!
+                - heading "Para trenes Avant" [level=2] [ref=e161]
+                - paragraph [ref=e162]:
+                  - paragraph [ref=e165]: Llega el nuevo Pase Vía, una suscripción trimestral gratuita que te permite viajar llegando a un 90% de descuento. Cuanto más viajas, más descuento.
+              - generic "Enlace a la página sobre el nuevo Pase Vía" [ref=e168]: Más información
+            - figure [ref=e170]
+          - link [ref=e176] [cursor=pointer]:
+            - /url: /es/es/inspirate/experiencias/viajes-por-meses/escapadas-invierno
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - text: ¡El invierno te espera!
+                - heading [level=2] [ref=e180]: Invierno en tren
+                - paragraph [ref=e181]:
+                  - paragraph [ref=e184]: ¿Ya tienes planes para este invierno? Echa un ojo a nuestra selección de escapadas, destinos invernales y planes en familia, ¡disfruta del frío a tu manera!
+              - generic [ref=e187]: Pon rumbo al invierno
+            - figure [ref=e189]
+          - link [ref=e195] [cursor=pointer]:
+            - /url: /es/es/viajar/prepara-tu-viaje/quiero-avlo/conocenos
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - text: Con Avlo, viaja más por menos
+                - heading [level=2] [ref=e199]: Ahora, billetes Avlo niños a 5 €
+                - paragraph [ref=e200]:
+                  - paragraph [ref=e203]: Bajamos el precio del billete para niños a 5 €. ¡Sí, sí, a partir de ahora los billetes para menores de 14 años por un precio fijo de 5 €! Y adultos, desde 7 €. ¡Solo es más barato en brazos!
+              - generic [ref=e206]: Muévete con Avlo
+            - figure [ref=e208]
+          - link [ref=e214] [cursor=pointer]:
+            - /url: /es/es/viajar/informacion-util/mascotas
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - text: ¡Mascotas bienvenidas!
+                - heading [level=2] [ref=e218]: Tu mascota viaja contigo
+                - paragraph [ref=e219]:
+                  - paragraph [ref=e222]: Nuestras mascotas son parte de la familia. Viaja con ellas en nuestros trenes y disfruta siempre de la mejor compañía.
+              - generic [ref=e225]: ¡Guau!
+            - figure [ref=e227]
+      - generic [ref=e230]:
+        - heading "¿Qué está pasando?" [level=2] [ref=e233]
+        - generic [ref=e235]:
+          - link "¡Nuevo! Abonos 2026 Consulta todas las novedades sobre los abonos bonificados para viajar en Cercanías y Media Distancia. Conoce también el nuevo Pase Vía, el Abono Único y el Abono 10/30. Más información" [ref=e239] [cursor=pointer]:
+            - /url: /es/es/promociones/abonos-renfe
+            - generic [ref=e240]:
+              - figure [ref=e242]
+              - generic [ref=e243]:
+                - generic [ref=e244]:
+                  - heading "¡Nuevo! Abonos 2026" [level=3] [ref=e246]
+                  - paragraph [ref=e247]: Consulta todas las novedades sobre los abonos bonificados para viajar en Cercanías y Media Distancia. Conoce también el nuevo Pase Vía, el Abono Único y el Abono 10/30.
+                - generic "Enlace a la página de los nuevos abonos bonificados" [ref=e250]: Más información
+          - link "Viaja más barato con Mas Renfe Canjea tus Puntos Renfe por vales descuento para viajar en tren. Cuéntame más" [ref=e254] [cursor=pointer]:
+            - /url: /es/es/programa-mas-renfe/que-es
+            - generic [ref=e255]:
+              - figure [ref=e257]
+              - generic [ref=e258]:
+                - generic [ref=e259]:
+                  - heading "Viaja más barato con Mas Renfe" [level=3] [ref=e261]
+                  - paragraph [ref=e262]: Canjea tus Puntos Renfe por vales descuento para viajar en tren.
+                - generic "Enlace a la página de Más Renfe" [ref=e265]: Cuéntame más
+          - link "Oferta Renfe Viajes Reserva ahora tu viaje de tren + hotel a cualquier destino para cualquier fecha y aprovéchate de un 30% de descuento. Ver oferta" [ref=e269] [cursor=pointer]:
+            - /url: https://renfeviajes.renfe.com/es/Compra/3833
+            - generic [ref=e270]:
+              - figure [ref=e272]
+              - generic [ref=e273]:
+                - generic [ref=e274]:
+                  - heading "Oferta Renfe Viajes" [level=3] [ref=e276]
+                  - paragraph [ref=e277]: Reserva ahora tu viaje de tren + hotel a cualquier destino para cualquier fecha y aprovéchate de un 30% de descuento.
+                - generic "Enlace a la página de Renfe Viajes oferta tren + hotel" [ref=e280]: Ver oferta
+          - link "Mobile World Congress ¿Vas al MWC? ¡Nosotros te llevamos! Aprovecha nuestro 15% de descuento en tu billete de tren a Barcelona, del 2 al 5 de marzo. Me interesa" [ref=e284] [cursor=pointer]:
+            - /url: /es/es/promociones/mobile-world-congress
+            - generic [ref=e285]:
+              - figure [ref=e287]
+              - generic [ref=e288]:
+                - generic [ref=e289]:
+                  - heading "Mobile World Congress" [level=3] [ref=e291]
+                  - paragraph [ref=e292]: ¿Vas al MWC? ¡Nosotros te llevamos! Aprovecha nuestro 15% de descuento en tu billete de tren a Barcelona, del 2 al 5 de marzo.
+                - generic "Enlace a la página de Renfe sobre el Mobile World Congress" [ref=e295]: Me interesa
+          - link "Viaja en tren con descuento Familias, mayores de 60 años, jóvenes, niños, grupos... Tenemos el descuento que mejor se adapta a ti y a tu viaje, ¡descúbrelos todos! Ver todos los descuentos" [ref=e299] [cursor=pointer]:
+            - /url: /es/es/viajar/prepara-tu-viaje/descuentos
+            - generic [ref=e300]:
+              - figure [ref=e302]
+              - generic [ref=e303]:
+                - generic [ref=e304]:
+                  - heading "Viaja en tren con descuento" [level=3] [ref=e306]
+                  - paragraph [ref=e307]: Familias, mayores de 60 años, jóvenes, niños, grupos... Tenemos el descuento que mejor se adapta a ti y a tu viaje, ¡descúbrelos todos!
+                - generic "Enlace a la página de Descuentos" [ref=e310]: Ver todos los descuentos
+          - link "Planes para esquiar Sea en España o en Francia, te contamos los mejores planes para una escapada a la nieve, ¡hazlos realidad en tren! ¿Nos vamos?" [ref=e314] [cursor=pointer]:
+            - /url: /es/es/inspirate/experiencias/escapadas-en-tren/esquiar
+            - generic [ref=e315]:
+              - figure [ref=e317]
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - heading "Planes para esquiar" [level=3] [ref=e321]
+                  - paragraph [ref=e322]: Sea en España o en Francia, te contamos los mejores planes para una escapada a la nieve, ¡hazlos realidad en tren!
+                - generic "Enlace a la página de Renfe sobre Dónde esquiar en España y en Francia" [ref=e325]: ¿Nos vamos?
+      - generic [ref=e328]:
+        - text:        
+        - generic [ref=e338]:
+          - heading "¿Por qué elegir Renfe?" [level=2] [ref=e341]
+          - generic [ref=e345]:
+            - generic "Carrusel" [ref=e346]:
+              - text: 
+              - button "Página siguiente del carrusel" [ref=e347] [cursor=pointer]
+            - generic "Selección de página del carrusel" [ref=e348]:
+              - button "Página del carrusel 1 Página actual del carrusel" [ref=e349] [cursor=pointer]
+              - button "Página del carrusel 2" [ref=e350] [cursor=pointer]
+            - generic [ref=e353]:
+              - generic [ref=e354]:
+                - generic [ref=e355]:
+                  - generic [ref=e356]: 
+                  - heading "Compromiso de puntualidad" [level=3] [ref=e358]
+                - paragraph [ref=e359]: Llegar a tiempo es una de tus prioridades, por eso mantenemos nuestros esfuerzos por conseguirlo.
+              - generic [ref=e360]:
+                - generic [ref=e361]:
+                  - generic [ref=e362]: 
+                  - heading "Más trenes y destinos que nadie" [level=3] [ref=e364]
+                - paragraph [ref=e365]: Más de 300 servicios diarios de larga distancia para viajar por toda España en trenes AVE, Avlo, Alvia, Euromed e Intercity.
+              - generic [ref=e366]:
+                - generic [ref=e367]:
+                  - generic [ref=e368]: 
+                  - heading "Mejor precio disponible" [level=3] [ref=e370]
+                - paragraph [ref=e371]: Solo en nuestra web disfruta del precio más bajo, sin comisiones ni gastos de gestión.
+              - generic [ref=e372]:
+                - generic [ref=e373]:
+                  - generic [ref=e374]: 
+                  - heading [level=3] [ref=e376]: Compromiso con el medio ambiente
+                - paragraph [ref=e377]: Somos el medio de transporte más ecológico y sostenible, porque cuidar de nuestro planeta es importante.
+              - generic [ref=e378]:
+                - generic [ref=e379]:
+                  - generic [ref=e380]: 
+                  - heading [level=3] [ref=e382]: Personaliza tu viaje
+                - paragraph [ref=e383]: Configura tu billete de tren según tus necesidades y paga solo por lo que te interese.
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - generic [ref=e386]: 
+                  - heading [level=3] [ref=e388]: De centro a centro
+                - paragraph [ref=e389]: Te llevamos de centro a centro de la ciudad, para que llegues a tu destino rápida y cómodamente.
+        - generic [ref=e392]:
+          - heading "Destinos del mes" [level=2] [ref=e395]
+          - generic [ref=e396]:
+            - generic "Carrusel":
+              - text: 
+              - button "Página siguiente del carrusel" [ref=e397] [cursor=pointer]
+            - generic "Selección de página del carrusel" [ref=e398]:
+              - button "Página del carrusel 1 Página actual del carrusel" [ref=e399] [cursor=pointer]
+              - button "Página del carrusel 2" [ref=e400] [cursor=pointer]
+              - button "Página del carrusel 3" [ref=e401] [cursor=pointer]
+            - generic [ref=e404]:
+              - link "Salamanca ¡Hazte una escapada romántica a Salamanca! ¡Quiero ir!" [ref=e410] [cursor=pointer]:
+                - /url: /es/es/inspirate/destinos/salamanca
+                - generic [ref=e411]:
+                  - figure [ref=e413]
+                  - generic [ref=e414]:
+                    - generic [ref=e415]:
+                      - heading "Salamanca" [level=3] [ref=e417]
+                      - paragraph [ref=e418]: ¡Hazte una escapada romántica a Salamanca!
+                    - generic "Enlace a la página de destino Salamanca" [ref=e421]: ¡Quiero ir!
+              - link "Badajoz Descubre por qué viajar a Badajoz en febrero. ¡Quiero ir!" [ref=e427] [cursor=pointer]:
+                - /url: /es/es/inspirate/destinos/badajoz
+                - generic [ref=e428]:
+                  - figure [ref=e430]
+                  - generic [ref=e431]:
+                    - generic [ref=e432]:
+                      - heading "Badajoz" [level=3] [ref=e434]
+                      - paragraph [ref=e435]: Descubre por qué viajar a Badajoz en febrero.
+                    - generic "Enlace a la página de destino Badajoz" [ref=e438]: ¡Quiero ir!
+              - link [ref=e444] [cursor=pointer]:
+                - /url: /es/es/inspirate/destinos/alicante
+                - generic [ref=e445]:
+                  - figure [ref=e447]
+                  - generic [ref=e448]:
+                    - generic [ref=e449]:
+                      - heading [level=3] [ref=e451]: Alicante
+                      - paragraph [ref=e452]: Pon rumbo a Alicante y vive febrero en el Mediterráneo.
+                    - generic [ref=e455]: ¡Quiero ir!
+              - link [ref=e461] [cursor=pointer]:
+                - /url: /es/es/inspirate/destinos/lleida
+                - generic [ref=e462]:
+                  - figure [ref=e464]
+                  - generic [ref=e465]:
+                    - generic [ref=e466]:
+                      - heading [level=3] [ref=e468]: Lleida
+                      - paragraph [ref=e469]: Saborea lo mejor de Lleida con Renfe.
+                    - generic [ref=e472]: ¡Quiero ir!
+              - link [ref=e478] [cursor=pointer]:
+                - /url: /es/es/inspirate/destinos/leon/pueblos-leon
+                - generic [ref=e479]:
+                  - figure [ref=e481]
+                  - generic [ref=e482]:
+                    - generic [ref=e483]:
+                      - heading [level=3] [ref=e485]: Pueblos de León
+                      - paragraph [ref=e486]: Enamórate de estos pueblos cerca de León.
+                    - generic [ref=e489]: ¡Quiero ir!
+      - generic [ref=e491]:
+        - heading "Rutas en tren más populares" [level=2] [ref=e492]
+        - heading "Todas las rutas en tren" [level=2] [ref=e493]:
+          - link "Todas las rutas en tren" [ref=e494] [cursor=pointer]:
+            - /url: https://www.renfe.com/es/es/experiencias/rutas
+      - generic [ref=e498]:
+        - generic "Carrusel":
+          - text: 
+          - button "Página siguiente del carrusel" [ref=e499] [cursor=pointer]
+        - generic "Selección de página del carrusel" [ref=e500]:
+          - button "Página del carrusel 1 Página actual del carrusel" [ref=e501] [cursor=pointer]
+          - button "Página del carrusel 2" [ref=e502] [cursor=pointer]
+          - button "Página del carrusel 3" [ref=e503] [cursor=pointer]
+        - generic [ref=e506]:
+          - link "Barcelona - Sevilla" [ref=e513] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/barcelona-sevilla
+            - figure [ref=e514]
+            - paragraph [ref=e516]: Barcelona - Sevilla
+          - link "Madrid - Tarragona" [ref=e523] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/madrid-tarragona
+            - figure [ref=e524]
+            - paragraph [ref=e526]: Madrid - Tarragona
+          - link "Madrid - Alicante/Alacant" [ref=e533] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/madrid-alicante
+            - figure [ref=e534]
+            - paragraph [ref=e536]: Madrid - Alicante/Alacant
+          - link [ref=e543] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/barcelona-zaragoza
+            - figure [ref=e544]
+            - paragraph [ref=e546]: Barcelona - Zaragoza
+          - link [ref=e553] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/madrid-malaga
+            - figure [ref=e554]
+            - paragraph [ref=e556]: Madrid - Málaga
+          - link [ref=e563] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/leon-madrid
+            - figure [ref=e564]
+            - paragraph [ref=e566]: León - Madrid
+          - link [ref=e573] [cursor=pointer]:
+            - /url: /es/es/inspirate/rutas/madrid-valencia
+            - figure [ref=e574]
+            - paragraph [ref=e576]: Madrid - València
+      - generic [ref=e581]:
+        - link "Revista Club Renfe Escarpadas cumbres, valles serpenteados, acantilados con vistas al mar... Las Sierras de Tejeda, Almijara y Alhama atesoran una rica naturaleza. Leer online" [ref=e585] [cursor=pointer]:
+          - /url: /es/es/revista-club/a-vista-de-dron/refugio-natural-malaga-granada
+          - generic [ref=e586]:
+            - figure [ref=e588]
+            - generic [ref=e589]:
+              - generic [ref=e590]:
+                - heading "Revista Club Renfe" [level=2] [ref=e592]
+                - paragraph [ref=e593]: Escarpadas cumbres, valles serpenteados, acantilados con vistas al mar... Las Sierras de Tejeda, Almijara y Alhama atesoran una rica naturaleza.
+              - generic "Enlace a revista Club Renfe" [ref=e596]: Leer online
+        - link "La flota más moderna Una inversión sin precedentes para garantizar la máxima calidad de los servicios públicos. Saber más" [ref=e600] [cursor=pointer]:
+          - /url: /es/es/grupo-renfe/comunicacion/te-contamos-mas/la-renovacion-de-la-flota-de-renfe-preve-la-incorporacion-de-nuevos-trenes-con-una-inversion-de-millones-de-euros
+          - generic [ref=e601]:
+            - figure [ref=e603]
+            - generic [ref=e604]:
+              - generic [ref=e605]:
+                - heading "La flota más moderna" [level=3] [ref=e607]
+                - paragraph [ref=e608]: Una inversión sin precedentes para garantizar la máxima calidad de los servicios públicos.
+              - generic "Enlace a renovación de la flota de Renfe" [ref=e611]: Saber más
+      - generic [ref=e615]:
+        - heading "Renfe al día" [level=2] [ref=e618]
+        - generic [ref=e620]:
+          - generic [ref=e622]:
+            - generic:
+              - generic:
+                - link:
+                  - /url: /es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-restablece-servicio-alta-velocidad-madrid-andalucia
+            - link "17-02-2026 Renfe restablece el servicio de alta velocidad entre Madrid y Andalucía La recuperación de la normalidad se produce tras la finalización de los trabajos de reparación de la infraestructura, así como de las pruebas técnicas necesarias para garantizar la seguridad en la circulación y las pruebas de comprobación de la señalización." [ref=e624] [cursor=pointer]:
+              - /url: /es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-restablece-servicio-alta-velocidad-madrid-andalucia
+              - generic [ref=e625]:
+                - figure [ref=e627]
+                - generic [ref=e629]:
+                  - generic [ref=e630]: 17-02-2026
+                  - heading "Renfe restablece el servicio de alta velocidad entre Madrid y Andalucía" [level=3] [ref=e632]
+                  - paragraph [ref=e633]: La recuperación de la normalidad se produce tras la finalización de los trabajos de reparación de la infraestructura, así como de las pruebas técnicas necesarias para garantizar la seguridad en la circulación y las pruebas de comprobación de la señalización.
+          - generic [ref=e635]:
+            - generic:
+              - generic:
+                - link:
+                  - /url: /es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-restablece-conexion-algeciras-madrid
+            - link "Renfe restablece la conexión Algeciras-Madrid con un servicio alternativo entre la capital algecireña y Antequera Como consecuencia de la afectación en la infraestructura a la altura de Álora, el trayecto Algeciras-Antequera Santa Ana se realizará por carretera y entre esta estación y Madrid en AVE." [ref=e637] [cursor=pointer]:
+              - /url: /es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-restablece-conexion-algeciras-madrid
+              - generic [ref=e638]:
+                - figure [ref=e640]
+                - generic [ref=e642]:
+                  - heading "Renfe restablece la conexión Algeciras-Madrid con un servicio alternativo entre la capital algecireña y Antequera" [level=3] [ref=e644]
+                  - paragraph [ref=e645]: Como consecuencia de la afectación en la infraestructura a la altura de Álora, el trayecto Algeciras-Antequera Santa Ana se realizará por carretera y entre esta estación y Madrid en AVE.
+          - generic [ref=e647]:
+            - generic:
+              - generic:
+                - link:
+                  - /url: /es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-restablece-conexion-malaga-madrid
+            - link "Renfe restablece la conexión Málaga-Madrid con un servicio alternativo entre la capital y Antequera Como consecuencia de la afectación en la infraestructura a la altura de Álora, el trayecto Málaga-Antequera Santa Ana se realizará por carretera y entre esta estación y Madrid en tren de alta velocidad habitual." [ref=e649] [cursor=pointer]:
+              - /url: /es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-restablece-conexion-malaga-madrid
+              - generic [ref=e650]:
+                - figure [ref=e652]:
+                  - img "Destino Malaga panorámica catedral" [ref=e653]
+                - generic [ref=e655]:
+                  - heading "Renfe restablece la conexión Málaga-Madrid con un servicio alternativo entre la capital y Antequera" [level=3] [ref=e657]
+                  - paragraph [ref=e658]: Como consecuencia de la afectación en la infraestructura a la altura de Álora, el trayecto Málaga-Antequera Santa Ana se realizará por carretera y entre esta estación y Madrid en tren de alta velocidad habitual.
+    - generic [ref=e667]:
+      - generic [ref=e672]:
+        - generic [ref=e673]:
+          - generic [ref=e674]:
+            - list [ref=e676]:
+              - listitem [ref=e677]:
+                - link "Conócenos" [ref=e678] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe
+              - listitem [ref=e679]:
+                - link "Grupo Renfe" [ref=e680] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe
+              - listitem [ref=e681]:
+                - link "Transporte sostenible" [ref=e682] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible
+              - listitem [ref=e683]:
+                - link "Comunicación" [ref=e684] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion
+              - listitem [ref=e685]:
+                - link "Empleo y talento" [ref=e686] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/talento-y-personas
+              - listitem [ref=e687]:
+                - link "Gobierno corporativo y transparencia" [ref=e688] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia
+              - listitem [ref=e689]:
+                - link "Contratación" [ref=e690] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/contratacion
+              - listitem [ref=e691]:
+                - link "Ver más" [ref=e692] [cursor=pointer]:
+                  - /url: "#"
+            - link " Avisos" [ref=e697] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/renfe-al-dia/avisos
+              - generic [ref=e698]: 
+              - generic [ref=e701]: Avisos
+          - generic [ref=e706]:
+            - generic [ref=e707]: Redes sociales
+            - generic [ref=e708]:
+              - link "Acceder a Facebook" [ref=e710] [cursor=pointer]:
+                - /url: https://www.facebook.com/Renfe
+                - generic [ref=e711]: 
+              - link "Acceder a Instagram" [ref=e713] [cursor=pointer]:
+                - /url: https://www.instagram.com/renfe/
+                - generic [ref=e714]: 
+              - link "Acceder a X" [ref=e716] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/renfe-al-dia/siguenos
+                - generic [ref=e717]: 
+              - 'link "Acceder a YouTube:: Se abre en nueva ventana" [ref=e719] [cursor=pointer]':
+                - /url: https://www.youtube.com/@renfe
+                - generic [ref=e720]: 
+              - 'link "Acceder a LinkedIn:: Se abre en nueva ventana" [ref=e722] [cursor=pointer]':
+                - /url: https://www.linkedin.com/company/renfe
+                - generic [ref=e723]: 
+              - link "Enlace a Tik Tok" [ref=e725] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@renfe
+                - generic [ref=e726]: 
+        - generic [ref=e727]:
+          - list [ref=e728]:
+            - listitem [ref=e729]:
+              - link "Cercanías" [ref=e730] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias
+            - listitem [ref=e731]:
+              - link "Asturias" [ref=e732] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-asturias
+            - listitem [ref=e733]:
+              - link "Bilbao" [ref=e734] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-bilbao
+            - listitem [ref=e735]:
+              - link "Cádiz" [ref=e736] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-cadiz
+            - listitem [ref=e737]:
+              - link "Cantabria" [ref=e738] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-cantabria
+            - listitem [ref=e739]:
+              - link "Cartagena" [ref=e740] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-cartagena
+            - listitem [ref=e741]:
+              - link "Ferrol" [ref=e742] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-ferrol
+            - listitem [ref=e743]:
+              - link "León" [ref=e744] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-leon
+            - listitem [ref=e745]:
+              - link "Madrid" [ref=e746] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-madrid
+            - listitem [ref=e747]:
+              - link "Ver más" [ref=e748] [cursor=pointer]:
+                - /url: "#"
+          - list [ref=e749]:
+            - listitem [ref=e750]:
+              - link "Ayuda" [ref=e751] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda
+            - listitem [ref=e752]:
+              - link "Cambiar billete" [ref=e753] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/cambiar-billete
+            - listitem [ref=e754]:
+              - link "Anular billete" [ref=e755] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/anular-billete
+            - listitem [ref=e756]:
+              - link "Cercanías" [ref=e757] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/cercanias
+            - listitem [ref=e758]:
+              - link "FAQs" [ref=e759] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/faqs
+            - listitem [ref=e760]:
+              - link "Objetos perdidos" [ref=e761] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/objetos-perdidos
+            - listitem [ref=e762]:
+              - link "Teléfonos de atención de Renfe" [ref=e763] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/telefonos-atencion-renfe
+            - listitem [ref=e764]:
+              - link "Contactar con Renfe" [ref=e765] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/contactar-renfe
+            - listitem [ref=e766]:
+              - link "Compromiso de puntualidad" [ref=e767] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/compromiso-puntualidad
+            - listitem [ref=e768]:
+              - link "Ver más" [ref=e769] [cursor=pointer]:
+                - /url: "#"
+          - list [ref=e770]:
+            - listitem [ref=e771]:
+              - link "Apps y Webs" [ref=e772] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/viajar/informacion-util/aplicaciones
+            - listitem [ref=e773]:
+              - link "Renfe" [ref=e774] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfeviajeros.ticket
+            - listitem [ref=e775]:
+              - link "Renfe cercanías" [ref=e776] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfe.renfecercanias&hl=es
+            - listitem [ref=e777]:
+              - link "Play Renfe" [ref=e778] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfe.playrenfe&hl=es
+            - listitem [ref=e779]:
+              - link "Renfe Asistencia" [ref=e780] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfe.renfeatendo&hl=es
+            - listitem [ref=e781]:
+              - link "Renfe viajes" [ref=e782] [cursor=pointer]:
+                - /url: https://renfeviajes.renfe.com?utm_source=renfe&utm_medium=referral&utm_campaign=home-footer
+            - listitem [ref=e783]:
+              - link "Revista Club Renfe" [ref=e784] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/revista-club
+            - listitem [ref=e785]:
+              - link "Blog Renfe" [ref=e786] [cursor=pointer]:
+                - /url: https://blog.renfe.com/
+            - listitem [ref=e787]:
+              - link "Renfe Agencias" [ref=e788] [cursor=pointer]:
+                - /url: https://agencias.renfe.com/vol/agencias.do
+            - listitem [ref=e789]:
+              - link "Ver más" [ref=e790] [cursor=pointer]:
+                - /url: "#"
+          - list [ref=e791]:
+            - listitem [ref=e792]:
+              - link "Rutas en Tren" [ref=e793] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/experiencias/rutas
+            - listitem [ref=e794]:
+              - link "Madrid-Barcelona" [ref=e795] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/inspirate/rutas/madrid-barcelona
+            - listitem [ref=e796]:
+              - link "Barcelona-Madrid" [ref=e797] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/inspirate/rutas/barcelona-madrid
+            - listitem [ref=e798]:
+              - link "València-Barcelona" [ref=e799] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/inspirate/rutas/valencia-barcelona
+            - listitem [ref=e800]:
+              - link "Madrid-València" [ref=e801] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/inspirate/rutas/madrid-valencia
+            - listitem [ref=e802]:
+              - link "Madrid-Alicante" [ref=e803] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/inspirate/rutas/madrid-alicante
+      - generic [ref=e808]:
+        - list [ref=e809]:
+          - listitem [ref=e810]:
+            - link "Información legal" [ref=e811] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros
+          - listitem [ref=e812]:
+            - link "Privacidad y Cookies" [ref=e813] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros/privacidad-cookies
+          - listitem [ref=e814]:
+            - link "Accesibilidad web y Apps" [ref=e815] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros/accesibilidad-web
+          - listitem [ref=e816]:
+            - link "Certificaciones de Ciberseguridad" [ref=e817] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros/certificaciones-ciberseguridad
+        - generic [ref=e818]:
+          - generic [ref=e819]: © Renfe - Todos los derechos reservados
+          - link "Logotipo Ministerio de Transportes y Movilidad Sostenible" [ref=e821] [cursor=pointer]:
+            - /url: https://www.mitma.gob.es/
+            - figure [ref=e822]:
+              - img "Logotipo Ministerio de Transportes y Movilidad Sostenible" [ref=e823]
+  - generic: 
+```

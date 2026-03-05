@@ -2,6 +2,7 @@
  * Reuslt Page Object
  */
 import  {BasePage} from './BasePage';
+import { TEST_DATA } from '../utils/testData';
 
 export class ResultPage extends BasePage {
     // Locators
@@ -66,7 +67,7 @@ get buttonAceptarConfirmacionFareUpgrade(){
         console.log('Waiting for ticket results...');
         let lastTicketResults = [];
 
-        for (let attempt = 1; attempt <= 3; attempt++) {
+        for (let attempt = 1; attempt <= 5; attempt++) {
             await this.travelOptions.first().waitFor({ timeout: 10000 });
             const ticketResults = await this.getAvailableTicket();
             const ticketsCount = ticketResults.length;
@@ -106,39 +107,6 @@ get buttonAceptarConfirmacionFareUpgrade(){
     // }
     
     /**
-     * Return count of available tickets with optional attribute details
-     * @param {boolean} includeAttributes - If true, returns object with count and attributes
-     * @returns {Promise<number|Object>} - Returns count or object with {count, tickets: [{hasPrice, hasDuration}]}
-     */
-    async findAvailableTickets(includeAttributes = false) {
-        const count = await this.travelOptions.count();
-        
-        if (!includeAttributes) {
-            return count;
-        }
-        
-        // Collect attribute information for each ticket
-        const tickets = await this.getAvailableTicket();
-        const ticketAttributes = [];
-        
-        for (const ticket of tickets) {
-            const priceCount = await ticket.locator(this.priceText).count();
-            const durationCount = await ticket.locator(this.durationText).count();
-            
-            ticketAttributes.push({
-                hasPrice: priceCount > 0,
-                hasDuration: durationCount > 0
-            });
-        }
-        
-        return {
-            count,
-            ticketsWithPrice: ticketAttributes.filter(t => t.hasPrice).length,
-            ticketsWithDuration: ticketAttributes.filter(t => t.hasDuration).length,
-            tickets: ticketAttributes
-        };
-    }
-    /**
      * extract ticket infos
      * @param {Locator} ticketElement - Locator for the ticket result element
      * @return {Promise<Object>}
@@ -168,14 +136,11 @@ get buttonAceptarConfirmacionFareUpgrade(){
                 priceText = await priceLocator.first().textContent();
             }
         }
-        // Commented: If still no price, throw error
-        // if (!priceText || priceText.trim() === "") {
-        //     await this.getMiddleDayDate.click();
-        //     await this.loadStateImg.waitFor({ state: 'hidden', timeout: 10000 }); 
-        // }
+
 
         // Extract numeric price from text
-        const price = parseFloat(priceText.replace(/[^0-9,]/g, '').replace(',', '.'));
+        const normalizedPriceText = (priceText || '').replace(/[^0-9,]/g, '').replace(',', '.');
+        const price = normalizedPriceText ? parseFloat(normalizedPriceText) : Number.NaN;
 
         return {
             price,
@@ -183,18 +148,51 @@ get buttonAceptarConfirmacionFareUpgrade(){
             element: ticketElement
         };
     }
-    /**Find ticket within price range 50-60
+    /**Find ticket within price range
+     * @param {number} minPrice - Minimum price (from TEST_DATA.MIN_PRICE)
+     * @param {number} maxPrice - Maximum price (from TEST_DATA.MAX_PRICE)
      * @return {Promise<Locator>}
      */
-    async findTicketWithinPriceRange(minPrice = 50, maxPrice = 60) {
-        const tickets = await this.getAvailableTicket();
-        for (const t of tickets) {
-            const details = await this.extractTicketDetails(t);
-            if (details.price >= minPrice && details.price <= maxPrice) {
-                return t;
+    async findTicketWithinPriceRange(minPrice = TEST_DATA.MIN_PRICE, maxPrice = TEST_DATA.MAX_PRICE) {
+        let lastTicketsCount = 0;
+
+        for (let attempt = 1; attempt <= 5; attempt++) {
+            const tickets = await this.getAvailableTicket();
+            const ticketsCount = tickets.length;
+            lastTicketsCount = ticketsCount;
+
+            console.log(`Attempt ${attempt}: Found ${ticketsCount} tickets. Searching for ticket in price range ${minPrice}-${maxPrice}€`);
+            const noDispoVisible = await this.noDispoIda.isVisible().catch(() => false);
+
+            if (ticketsCount === 0 || noDispoVisible) {
+                if (attempt < 5) {
+                    console.log('No available tickets, clicking to load next day...');
+                    await this.getMiddleDayDate.click();
+                    await this.loadStateImg.waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
+                    continue;
+                }
+                break;
             }
-        }
-        throw new Error(`No ticket found within price range ${minPrice}-${maxPrice}`);
+            
+            for (const t of tickets) {
+                const details = await this.extractTicketDetails(t);
+                console.log(`Found ticket with price: ${details.price}€`);
+                if (Number.isFinite(details.price) && details.price >= minPrice && details.price <= maxPrice) {
+                    console.log(`✓ Ticket found within price range: ${details.price}€`);
+                    return t;
+                }
+            }//rows.locator('').allTextContents()
+            
+            // If no ticket found in range and not the last attempt, click to get next day's tickets
+            if(attempt < 5){
+                console.log('No ticket found in range, clicking to load next day...');
+                await this.getMiddleDayDate.click();
+                await this.loadStateImg.waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {});
+            }
+         }
+
+        
+        throw new Error(`No ticket found within price range ${minPrice}-${maxPrice}€ after 5 attempts (last attempt had ${lastTicketsCount} tickets)`);
     }
     /**
      * Select ticket

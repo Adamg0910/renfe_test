@@ -1,0 +1,131 @@
+Waiting for ticket results...
+Attempt 1: Found 2 tickets
+Selected ticket- Price 56.9, Duration: 11 horas 35 minutos
+[debug] getClass count=1, visible=true
+[debug] buttonAceptarConfirmacionFareUpgrade count=1, visible=true
+-----------Promo Field------------
+------------Passenger Details Page Loaded----------
+							
+								
+              						
+                						Viaje de Ida
+                						
+                						Viernes 27 Febrero 
+										
+												
+												09:16
+												radio_button_checked                                          
+                                          		MADRID-ATOCHA CERCANÍAS 
+												
+												
+													
+													
+	                                        		18030                                      			
+													
+													
+														
+															linkEnlace:  Cambio de tren  - 2 horas 48 minutos
+														
+													
+																								
+	                                        		
+	                                        		00694
+												
+
+												
+													
+																		
+												20:51                     			                                       		                                         
+                                          		location_on                                          
+                                          		BARCELONA-SANTS
+                                          		
+                                          		 												                                      		                                       
+                                    	                							
+											
+												Básico
+													
+												 
+												
+												
+													56,90 €
+												
+											
+																															
+											
+												
+																										
+													
+														
+															
+															
+															
+																Viajero - Básico
+																
+																
+																	 56,90€
+																	
+																
+															
+														
+														
+														
+															
+															
+															
+																
+															
+														
+														
+														
+																	
+																		
+																		
+																	
+
+
+
+
+
+
+
+
+
+
+
+
+			
+																	
+													
+													
+												
+																				
+											
+												
+												
+											
+												
+											
+											
+											
+																																				
+									
+										
+              						
+									
+										
+										
+											
+											Total
+											 
+											
+											
+												56,90 €
+											
+										
+                						
+              							
+									
+									
+              						
+            					
+------------Customise Trip Page Loaded----------

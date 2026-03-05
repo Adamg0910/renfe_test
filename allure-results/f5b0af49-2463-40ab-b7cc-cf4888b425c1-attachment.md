@@ -1,0 +1,842 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - link "Renfe" [ref=e9] [cursor=pointer]:
+          - /url: ./home.do
+          - figure [ref=e10]:
+            - img "Inicio" [ref=e11]
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - generic [ref=e15]:
+              - button "Selector de idiomas" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17]: 
+                - generic [ref=e18]: Castellano
+                - text: 
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - list:
+                        - listitem:
+                          - link "Castellano":
+                            - /url: /vol/changeLanguage.do?lang=es_ES&url=/vol/buscarTrenEnlaces.do?c=
+                          - generic: 
+                        - listitem:
+                          - link "Catalán":
+                            - /url: /vol/changeLanguage.do?lang=ca_ES&url=/vol/buscarTrenEnlaces.do?c=
+                        - listitem:
+                          - link "Valenciano":
+                            - /url: /vol/changeLanguage.do?lang=va_ES&url=/vol/buscarTrenEnlaces.do?c=
+                        - listitem:
+                          - link "Euskera":
+                            - /url: /vol/changeLanguage.do?lang=eu_ES&url=/vol/buscarTrenEnlaces.do?c=
+                        - listitem:
+                          - link "Gallego":
+                            - /url: /vol/changeLanguage.do?lang=gl_ES&url=/vol/buscarTrenEnlaces.do?c=
+                        - listitem:
+                          - link "Inglés":
+                            - /url: /vol/changeLanguage.do?lang=en_UK&url=/vol/buscarTrenEnlaces.do?c=
+                        - listitem:
+                          - link "Francés":
+                            - /url: /vol/changeLanguage.do?lang=fr_FR&url=/vol/buscarTrenEnlaces.do?c=
+                      - button "Cerrar menú":
+                        - generic: 
+          - listitem [ref=e19]:
+            - generic [ref=e21]:
+              - button "" [ref=e22] [cursor=pointer]:
+                - generic [ref=e23]: 
+                - generic [ref=e24]: Buscar
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - menuitem " Cerrar menú":
+                        - generic: 
+                        - textbox "Buscar en Renfe.com"
+                        - button "Cerrar menú":
+                          - generic: 
+                        - status: "0"
+          - listitem [ref=e25]:
+            - link " Ayuda" [ref=e26] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda
+              - generic [ref=e27]: 
+              - text: Ayuda
+          - listitem [ref=e28]:
+            - generic [ref=e30]:
+              - generic [ref=e31] [cursor=pointer]:
+                - generic [ref=e33]: 
+                - text: 
+              - generic:
+                - generic:
+                  - generic:
+                    - list
+                    - generic:
+                      - generic:
+                        - generic:
+                          - group "Iniciar Sesión":
+                            - generic: Iniciar Sesión
+                            - textbox "Email / Número Más Renfe"
+                            - textbox "Contraseña"
+                            - generic:
+                              - generic:
+                                - link "He olvidado mi contraseña":
+                                  - /url: /vol/resetPassCEX.do
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - button "Entrar": Entrar
+                            - generic:
+                              - generic:
+                                - link "Quiero registrarme":
+                                  - /url: /vol/signup.do
+                                  - generic: Quiero registrarme
+                                  - generic: 
+      - generic [ref=e34]:
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - generic [ref=e38]:
+              - generic [ref=e39] [cursor=pointer]: Cercanías 
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - generic: 
+                        - link "Asturias":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-asturias
+                      - listitem:
+                        - generic: 
+                        - link "Bilbao":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-bilbao
+                      - listitem:
+                        - generic: 
+                        - link "Cádiz":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-cadiz
+                      - listitem:
+                        - generic: 
+                        - link "Cantabria":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-cantabria
+                      - listitem:
+                        - link "Cartagena":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-cartagena
+                      - listitem:
+                        - link "Ferrol":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-ferrol
+                      - listitem:
+                        - link "León":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-leon
+                      - listitem:
+                        - generic: 
+                        - link "Madrid":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-madrid
+                      - listitem:
+                        - generic: 
+                        - link "Málaga":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-malaga
+                      - listitem:
+                        - generic: 
+                        - link "Murcia/Alicante":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-murcia-alicante
+                      - listitem:
+                        - generic: 
+                        - link "Rodalia Barcelona":
+                          - /url: https://www.renfe.com/es/es/cercanias/rodalies-catalunya
+                      - listitem:
+                        - generic: 
+                        - link "San Sebastián":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-san-sebastian
+                      - listitem:
+                        - generic: 
+                        - link "Sevilla":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-sevilla
+                      - listitem:
+                        - generic: 
+                        - link "València":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-valencia
+                      - listitem:
+                        - generic: 
+                        - link "Zaragoza":
+                          - /url: https://www.renfe.com/es/es/cercanias/cercanias-zaragoza
+          - listitem [ref=e40]:
+            - generic [ref=e42]:
+              - generic [ref=e43] [cursor=pointer]: Viaja 
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Prepara tu viaje":
+                          - /url: https://www.renfe.com/es/es/viajar/prepara-tu-viaje
+                        - list:
+                          - listitem:
+                            - link "Billetes AVE y Larga Distancia":
+                              - /url: https://www.renfe.com/es/es/viajar/prepara-tu-viaje/billetes-ave-y-largadistancia
+                          - listitem:
+                            - link "Abonos AVE y Larga Distancia":
+                              - /url: https://www.renfe.com/es/es/viajar/prepara-tu-viaje/abonos-ave-y-largadistancia
+                          - listitem:
+                            - link "Trenes Avant y Media Distancia":
+                              - /url: https://www.renfe.com/es/es/viajar/prepara-tu-viaje/trenes-media-distancia-avant
+                          - listitem:
+                            - link "Descuentos":
+                              - /url: https://www.renfe.com/es/es/viajar/prepara-tu-viaje/descuentos
+                          - listitem:
+                            - link "Quiero Avlo":
+                              - /url: https://www.renfe.com/es/es/viajar/prepara-tu-viaje/quiero-avlo
+                          - listitem:
+                            - link "Ver todo":
+                              - /url: "#"
+                      - listitem:
+                        - link "El viaje":
+                          - /url: https://www.renfe.com/es/es/viajar/el-viaje
+                        - list:
+                          - listitem:
+                            - link "En tierra":
+                              - /url: https://www.renfe.com/es/es/viajar/el-viaje/en-tierra
+                          - listitem:
+                            - link "A bordo":
+                              - /url: https://www.renfe.com/es/es/viajar/el-viaje/a-bordo
+                          - listitem:
+                            - link "Wifi":
+                              - /url: https://www.renfe.com/es/es/viajar/el-viaje/wifi
+                      - listitem:
+                        - link "Información útil":
+                          - /url: https://www.renfe.com/es/es/viajar/informacion-util
+                        - list:
+                          - listitem:
+                            - link "Horarios":
+                              - /url: https://www.renfe.com/es/es/viajar/informacion-util/horarios
+                          - listitem:
+                            - link "Mapas y líneas":
+                              - /url: https://www.renfe.com/es/es/viajar/informacion-util/mapas-y-lineas
+                          - listitem:
+                            - link "Equipajes":
+                              - /url: https://www.renfe.com/es/es/viajar/informacion-util/equipajes
+                          - listitem:
+                            - link "Bicicletas":
+                              - /url: https://www.renfe.com/es/es/viajar/informacion-util/bicicletas
+                          - listitem:
+                            - link "Mascotas":
+                              - /url: https://www.renfe.com/es/es/viajar/informacion-util/mascotas
+                          - listitem:
+                            - link "Ver todo":
+                              - /url: "#"
+          - listitem [ref=e44]:
+            - generic [ref=e46]:
+              - generic [ref=e47] [cursor=pointer]: Inspírate 
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Rutas":
+                          - /url: https://www.renfe.com/es/es/inspirate/rutas
+                        - list:
+                          - listitem:
+                            - link "Barcelona - Madrid":
+                              - /url: https://www.renfe.com/es/es/inspirate/rutas/barcelona-madrid
+                          - listitem:
+                            - link "Madrid - València":
+                              - /url: https://www.renfe.com/es/es/inspirate/rutas/madrid-valencia
+                          - listitem:
+                            - link "Madrid - Málaga":
+                              - /url: https://www.renfe.com/es/es/inspirate/rutas/madrid-malaga
+                          - listitem:
+                            - link "Sevilla - Madrid":
+                              - /url: https://www.renfe.com/es/es/inspirate/rutas/sevilla-madrid
+                          - listitem:
+                            - link "Madrid - Alicante":
+                              - /url: https://www.renfe.com/es/es/inspirate/rutas/madrid-alicante
+                          - listitem:
+                            - link ">> Todas las rutas":
+                              - /url: https://www.renfe.com/es/es/inspirate/rutas/todas-las-rutas
+                      - listitem:
+                        - link "Destinos":
+                          - /url: https://www.renfe.com/es/es/inspirate/destinos
+                        - list:
+                          - listitem:
+                            - link "Madrid":
+                              - /url: https://www.renfe.com/es/es/inspirate/destinos/madrid
+                          - listitem:
+                            - link "Barcelona":
+                              - /url: https://www.renfe.com/es/es/inspirate/destinos/barcelona
+                          - listitem:
+                            - link "Toledo":
+                              - /url: https://www.renfe.com/es/es/inspirate/destinos/toledo
+                          - listitem:
+                            - link "Oviedo":
+                              - /url: https://www.renfe.com/es/es/inspirate/destinos/oviedo
+                          - listitem:
+                            - link "Cádiz":
+                              - /url: https://www.renfe.com/es/es/inspirate/destinos/cadiz
+                          - listitem:
+                            - link ">> Todos los destinos":
+                              - /url: https://www.renfe.com/es/es/inspirate/destinos/todos-los-destinos
+                      - listitem:
+                        - link "Estaciones":
+                          - /url: https://www.renfe.com/es/es/inspirate/estaciones
+                        - list:
+                          - listitem:
+                            - link "Madrid Puerta de Atocha - Almudena Grandes":
+                              - /url: https://www.renfe.com/es/es/inspirate/estaciones/madrid-puerta-atocha-almudena-grandes
+                          - listitem:
+                            - link "Madrid Chamartín - Clara Campoamor":
+                              - /url: https://www.renfe.com/es/es/inspirate/estaciones/madrid-chamartin-clara-campoamor
+                          - listitem:
+                            - link "Barcelona Sants":
+                              - /url: https://www.renfe.com/es/es/inspirate/estaciones/barcelona-sants
+                          - listitem:
+                            - link "Zaragoza Delicias":
+                              - /url: https://www.renfe.com/es/es/inspirate/estaciones/zaragoza-delicias
+                          - listitem:
+                            - link ">> Todas las estaciones":
+                              - /url: https://www.renfe.com/es/es/inspirate/estaciones/todas-las-estaciones
+                      - listitem:
+                        - link "Experiencias":
+                          - /url: https://www.renfe.com/es/es/inspirate/experiencias
+                        - list:
+                          - listitem:
+                            - link "Ofertas y Promociones":
+                              - /url: https://www.renfe.com/es/es/inspirate/experiencias/ofertas-y-promociones
+                          - listitem:
+                            - link "Trenes Temáticos":
+                              - /url: https://www.renfe.com/es/es/inspirate/experiencias/trenes-tematicos
+                          - listitem:
+                            - link "Lo más popular":
+                              - /url: https://www.renfe.com/es/es/inspirate/experiencias/lo-mas-popular
+                          - listitem:
+                            - link "Planes de fin de semana":
+                              - /url: https://www.renfe.com/es/es/inspirate/experiencias/planes-de-fin-de-semana
+                          - listitem:
+                            - link "Viajes por meses":
+                              - /url: https://www.renfe.com/es/es/inspirate/experiencias/viajes-por-meses
+                          - listitem:
+                            - link ">> Todas las experiencias":
+                              - /url: https://www.renfe.com/es/es/inspirate/experiencias/todas-las-experiencias
+          - listitem [ref=e48]:
+            - generic [ref=e50]:
+              - generic [ref=e51] [cursor=pointer]: Gestiona tu billete 
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Tus reservas":
+                          - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas
+                        - list:
+                          - listitem:
+                            - link "Consulta tus viajes":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas/consulta-tus-viajes
+                          - listitem:
+                            - link "Cambia tu billete":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas/cambia-tu-billete
+                          - listitem:
+                            - link "Anula tu billete":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas/anula-tu-billete
+                          - listitem:
+                            - link "Compra grupos 10 a 25":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas/compra-grupos-10-25
+                          - listitem:
+                            - link "Compra con localizador":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas/compra-con-localizador
+                          - listitem:
+                            - link "Estado de tu tren":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/tus-reservas/estado-de-tu-tren
+                      - listitem:
+                        - link "Añade extras":
+                          - /url: https://www.renfe.com/es/es/gestiona-tu-billete/anade-extras
+                        - list:
+                          - listitem:
+                            - link "Añade billete niño":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/anade-extras/anade-billete-nino
+                          - listitem:
+                            - link "Añade extra de viaje":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/anade-extras/anade-extra-de-viaje
+                      - listitem:
+                        - link "Posventa":
+                          - /url: https://www.renfe.com/es/es/gestiona-tu-billete/posventa
+                        - list:
+                          - listitem:
+                            - link "Solicita indemnización":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/posventa/solicita-indemnizacion
+                          - listitem:
+                            - link "Solicita tu factura":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/posventa/solicita-tu-factura
+                          - listitem:
+                            - link "Tramita tu reclamación":
+                              - /url: https://www.renfe.com/es/es/gestiona-tu-billete/posventa/tramita-tu-reclamacion
+          - listitem [ref=e52]:
+            - link "Más Renfe" [ref=e53] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/programa-mas-renfe
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - generic [ref=e57]:
+              - generic [ref=e58] [cursor=pointer]: Grupo Renfe 
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Grupo Renfe":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe
+                        - list:
+                          - listitem:
+                            - link "Conócenos":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/conocenos
+                          - listitem:
+                            - link "Renfe 2028":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/renfe-2028
+                          - listitem:
+                            - link "Flota de trenes":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/flota-de-trenes
+                          - listitem:
+                            - link "Empresa responsable":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/empresa-responsable
+                      - listitem:
+                        - link "Transporte sostenible":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible
+                        - list:
+                          - listitem:
+                            - link "Eficiencia energética":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible/eficiencia-energetica
+                          - listitem:
+                            - link "Menos emisiones":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible/reduccion-de-emisiones
+                          - listitem:
+                            - link "Movilidad Sostenible":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible/en-el-centro-de-la-movilidad-sostenible
+                          - listitem:
+                            - link "Tren+Bici":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible/tren-bici
+                          - listitem:
+                            - link "Dõcõ Mobility":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/transporte-sostenible/doco-mobility
+                      - listitem:
+                        - link "Comunicación":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion
+                        - list:
+                          - listitem:
+                            - link "Renfe al día":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/renfe-al-dia
+                          - listitem:
+                            - link "Sala de prensa":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/sala-de-prensa
+                          - listitem:
+                            - link "Contacto para profesionales":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/contacto-para-profesionales
+                          - listitem:
+                            - link "Nuestra marca":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/nuestra-marca
+                          - listitem:
+                            - link "Te contamos más":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/te-contamos-mas
+                      - listitem:
+                        - link "Empleo y talento":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/talento-y-personas
+                        - list:
+                          - listitem:
+                            - link "Empleo":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/talento-y-personas/empleo
+                          - listitem:
+                            - link "Formación":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/talento-y-personas/formacion
+                          - listitem:
+                            - link "Campus Renfe":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/talento-y-personas/campus-renfe
+                          - listitem:
+                            - link "Servicios de Formación Externa":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/talento-y-personas/servicios-formacion-externa
+                      - listitem:
+                        - link "Gobierno corporativo y transparencia":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia
+                        - list:
+                          - listitem:
+                            - link "Gobierno corporativo":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/gobierno-corporativo
+                          - listitem:
+                            - link "Información económica y de actividad":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/informacion-economica-y-de-actividad
+                          - listitem:
+                            - link "Puntualidad en los Servicios":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/puntualidad-en-los-servicios
+                          - listitem:
+                            - link "Transparencia":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/transparencia
+                      - listitem:
+                        - link "Contratación":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/contratacion
+                        - list:
+                          - listitem:
+                            - link "Proveedores y clientes":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/contratacion/proveedores-y-clientes
+                          - listitem:
+                            - link "Perfil del contratante":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/contratacion/perfil-del-contratante
+                          - listitem:
+                            - link "Licitaciones":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/contratacion/licitaciones
+                          - listitem:
+                            - link "Facturación Electrónica":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/contratacion/facturacion
+                      - listitem:
+                        - link "Fondos Europeos":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/fondos-europeos
+                        - list:
+                          - listitem:
+                            - link "Next Generation":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/fondos-europeos/fondos-next-generation
+                          - listitem:
+                            - link "CEF (Connecting Europe Facility)":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/fondos-europeos/fondos-europeos-cef
+                      - listitem:
+                        - link "ética y Compliance":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/etica-compliance
+                        - list:
+                          - listitem:
+                            - link "Compliance":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/etica-compliance/compliance
+                          - listitem:
+                            - link "ética":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/etica-compliance/etica
+                    - list:
+                      - listitem:
+                        - link "Sociedades ->>":
+                          - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe
+                        - list:
+                          - listitem:
+                            - link "Mercancías":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/transparencia/renfe-mercancias-sme-sa/organizacion
+                            - paragraph: Operador logístico ferroviario para el transporte de mercancías
+                          - listitem:
+                            - link "Ingeniería y mantenimiento":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/transparencia/renfe-ingenieria-y-mantenimiento-sme-sa/organizacion
+                            - paragraph: Ingeniería y mantenimiento de material rodante.
+                          - listitem:
+                            - link "Alquiler":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/transparencia/renfe-alquiler-sme-sa/organizacion
+                            - paragraph: Venta o alquiler de materiales ferroviarios e instalaciones
+                          - listitem:
+                            - link "Viajeros":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/transparencia/renfe-viajeros-sme-sa/organizacion
+                            - paragraph: Transporte para viajeros a destinos nacionales e internacionales
+                          - listitem:
+                            - link "Proyectos Internacionales":
+                              - /url: https://www.renfe.com/es/es/grupo-renfe/gobierno-corporativo-y-transparencia/transparencia/renfe-proyectos-internacionales-sme-sa/organizacion
+                            - paragraph: Una sociedad creada para desarrollar el negocio internacional de la compañía.
+  - article [ref=e59]:
+    - navigation "breadcrumb" [ref=e60]:
+      - list [ref=e61]:
+        - listitem [ref=e62]:
+          - link "Volver" [ref=e63] [cursor=pointer]:
+            - /url: /vol/home.do
+            - generic [ref=e64]: arrow_back_ios
+            - text: Volver
+    - list [ref=e66]:
+      - listitem [ref=e67]:
+        - link "Selecciona tu viaje " [ref=e68] [cursor=pointer]:
+          - /url: "#!"
+      - listitem [ref=e69]:
+        - link "Introduce tus datos" [disabled] [ref=e70] [cursor=pointer]:
+          - /url: "#!"
+      - listitem [ref=e71]:
+        - link "Personaliza tu viaje" [disabled] [ref=e72] [cursor=pointer]:
+          - /url: "#!"
+      - listitem [ref=e73]:
+        - link "Compra" [disabled] [ref=e74] [cursor=pointer]:
+          - /url: "#!"
+      - listitem [ref=e75]:
+        - link "Confirmación de compra" [disabled] [ref=e76] [cursor=pointer]:
+          - /url: "#!"
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - tablist "A continuación encontrará la Lista de trenes disponibles para la fecha de su viajes" [ref=e80]:
+          - listitem [ref=e81]:
+            - tab "Viaje de Ida" [selected] [ref=e82] [cursor=pointer]
+        - generic [ref=e83]:
+          - tabpanel "Viaje de Ida" [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]:
+                - generic [ref=e87]: radio_button_checked
+                - text: "Origen: Madrid-Atocha Cercanías"
+              - generic [ref=e88]:
+                - generic [ref=e89]: location_on
+                - text: "Destino: Barcelona-Sants"
+            - generic "Calendario de días" [ref=e90]:
+              - generic [ref=e91]:
+                - generic [ref=e92]:
+                  - button "Ir a dï¿½a anterior" [ref=e93] [cursor=pointer]: <
+                  - button "Ir a dï¿½a siguiente" [active] [ref=e94] [cursor=pointer]: ">"
+                - generic [ref=e95]:
+                  - generic [ref=e96]:
+                    - button "Sáb 28" [disabled]:
+                      - generic: Sáb
+                      - generic: "28"
+                    - button "Dom 01" [ref=e97]:
+                      - generic [ref=e98]: Dom
+                      - generic [ref=e99]: "01"
+                    - button "Lun 02" [ref=e100]:
+                      - generic [ref=e101]: Lun
+                      - generic [ref=e102]: "02"
+                    - button "Mar 03" [pressed] [ref=e103]:
+                      - generic [ref=e104]: Mar
+                      - generic [ref=e105]: "03"
+                    - button "Mié 04" [ref=e106]:
+                      - generic [ref=e107]: Mié
+                      - generic [ref=e108]: "04"
+                    - button "Jue 05" [ref=e109]:
+                      - generic [ref=e110]: Jue
+                      - generic [ref=e111]: "05"
+                    - button "Vie 06" [ref=e112]:
+                      - generic [ref=e113]: Vie
+                      - generic [ref=e114]: "06"
+                  - generic:
+                    - row
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - link "Trayectos disponibles entre las cinco y las doce de la mañana" [ref=e119] [cursor=pointer]:
+                  - /url: "#tren_i_0"
+                  - text: Mañana (desde las 5:00h.)
+                - generic "Trayectos disponibles entre las doce y las seis de la tarde" [ref=e121] [cursor=pointer]: Mediodía (desde las 12:00h.)
+                - generic "Trayectos disponibles a partir de las seis de la tarde" [ref=e123] [cursor=pointer]: Tarde (desde las 18:00h.)
+              - generic "Pulse Espacio o enter para mostrar los filtros" [ref=e125] [cursor=pointer]:
+                - generic [ref=e126]: tune
+                - text: Filtrar
+          - list "Lista de trenes disponibles para la ida" [ref=e128]:
+            - listitem "Tren con salida a las 09:16 y llegada a las 20:51. Duración 11 horas 35 minutos. Tren con Transbordo. Pulse espacio o enter para tener más detalle de las tarifas disponibles." [ref=e129]:
+              - 'link "Tren con salida a las 09:16 y llegada a las 20:51. Duración 11 horas 35 minutos. Tren con Transbordo. Tipos de tren: MD y ALVIA. Pulse espacio o enter para tener más detalle de las tarifas disponibles." [ref=e130] [cursor=pointer]':
+                - generic "Tren con salida a las 09:16 y llegada a las 20:51."
+                - generic "Duración 11 horas 35 minutos."
+                - generic "Tren con Transbordo."
+                - 'generic "Tipos de tren: MD y ALVIA."'
+                - generic "Pulse espacio o enter para tener más detalle de las tarifas disponibles."
+                - heading [level=5] [ref=e131]: 09:16 h
+                - generic [ref=e133]: 11 horas 35 minutos
+                - heading [level=5] [ref=e134]: 20:51 h
+              - generic [ref=e135] [cursor=pointer]:
+                - img [ref=e138]
+                - generic [ref=e139]:
+                  - text: Enlace
+                  - separator [ref=e140]
+                  - text: 2 horas 48 minutos
+                - img [ref=e143]
+              - cell "Precio desde 98,30 €" [ref=e145] [cursor=pointer]:
+                - generic [ref=e146]: Precio desde
+                - text: 98,30 €
+            - listitem "Tren con salida a las 13:11 y llegada a las 22:35. Duración 9 horas 24 minutos. Tren con Transbordo. Pulse espacio o enter para tener más detalle de las tarifas disponibles." [ref=e148]:
+              - 'link "Tren con salida a las 13:11 y llegada a las 22:35. Duración 9 horas 24 minutos. Tren con Transbordo. Tipos de tren: MD y AVE. Pulse espacio o enter para tener más detalle de las tarifas disponibles." [ref=e149] [cursor=pointer]':
+                - generic "Tren con salida a las 13:11 y llegada a las 22:35."
+                - generic "Duración 9 horas 24 minutos."
+                - generic "Tren con Transbordo."
+                - 'generic "Tipos de tren: MD y AVE."'
+                - generic "Pulse espacio o enter para tener más detalle de las tarifas disponibles."
+                - heading [level=5] [ref=e150]: 13:11 h
+                - generic [ref=e152]: 9 horas 24 minutos
+                - heading [level=5] [ref=e153]: 22:35 h
+              - generic [ref=e154] [cursor=pointer]:
+                - img [ref=e157]
+                - generic [ref=e158]:
+                  - text: Enlace
+                  - separator [ref=e159]
+                  - text: 2 horas 28 minutos
+                - img [ref=e162]
+              - generic "Este tren no se encuentra disponible para la venta en estos momentos. Disculpe las molestias." [ref=e164]:
+                - button [ref=e165]:
+                  - generic [ref=e166]: railway_alert
+                  - text: Este tren no se encuentra disponible para la venta en estos momentos. Disculpe las molestias.
+            - listitem "Tren con salida a las 13:11 y llegada a las 22:35. Duración 9 horas 24 minutos. Tren con Transbordo. Pulse espacio o enter para tener más detalle de las tarifas disponibles." [ref=e168]:
+              - 'link "Tren con salida a las 13:11 y llegada a las 22:35. Duración 9 horas 24 minutos. Tren con Transbordo. Tipos de tren: MD y AVE. Pulse espacio o enter para tener más detalle de las tarifas disponibles." [ref=e169] [cursor=pointer]':
+                - generic "Tren con salida a las 13:11 y llegada a las 22:35."
+                - generic "Duración 9 horas 24 minutos."
+                - generic "Tren con Transbordo."
+                - 'generic "Tipos de tren: MD y AVE."'
+                - generic "Pulse espacio o enter para tener más detalle de las tarifas disponibles."
+                - heading [level=5] [ref=e170]: 13:11 h
+                - generic [ref=e172]: 9 horas 24 minutos
+                - heading [level=5] [ref=e173]: 22:35 h
+              - generic [ref=e174] [cursor=pointer]:
+                - img [ref=e177]
+                - generic [ref=e178]:
+                  - text: Enlace
+                  - separator [ref=e179]
+                  - text: 2 horas 28 minutos
+                - img [ref=e182]
+              - generic "Este tren no se encuentra disponible para la venta en estos momentos. Disculpe las molestias." [ref=e184]:
+                - button [ref=e185]:
+                  - generic [ref=e186]: railway_alert
+                  - text: Este tren no se encuentra disponible para la venta en estos momentos. Disculpe las molestias.
+      - generic [ref=e189]:
+        - generic [ref=e191]:
+          - heading "Viaje de Ida" [level=5] [ref=e192]
+          - text: Martes 03 Marzo
+          - generic [ref=e193]:
+            - generic [ref=e194]: radio_button_checked
+            - strong [ref=e196]: Madrid-Atocha Cercanías
+            - generic [ref=e197]: location_on
+            - strong [ref=e199]: Barcelona-Sants
+            - paragraph [ref=e200]: No se ha seleccionado el tren
+        - generic [ref=e203]:
+          - generic [ref=e204]: Total
+          - generic [ref=e205]: 0 €
+  - generic:   
+  - contentinfo [ref=e206]:
+    - generic [ref=e208]:
+      - generic [ref=e213]:
+        - generic [ref=e214]:
+          - generic [ref=e215]:
+            - list [ref=e217]:
+              - listitem [ref=e218]:
+                - link "Conócenos" [ref=e219] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe
+              - listitem [ref=e220]:
+                - link "Conócenos" [ref=e221] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe
+              - listitem [ref=e222]:
+                - link "Renfe 2028" [ref=e223] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/conocenos/renfe-2028
+              - listitem [ref=e224]:
+                - link "Flota de trenes" [ref=e225] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/flota-de-trenes
+              - listitem [ref=e226]:
+                - link "Empresa responsable" [ref=e227] [cursor=pointer]:
+                  - /url: https://www.renfe.com/es/es/grupo-renfe/grupo-renfe/empresa-responsable
+            - link " Avisos" [ref=e232] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/grupo-renfe/comunicacion/renfe-al-dia/avisos
+              - generic [ref=e233]: 
+              - generic [ref=e236]: Avisos
+          - generic [ref=e242]:
+            - link "" [ref=e244] [cursor=pointer]:
+              - /url: https://www.facebook.com/Renfe
+              - generic [ref=e245]: 
+            - link "" [ref=e247] [cursor=pointer]:
+              - /url: https://www.instagram.com/renfe/
+              - generic [ref=e248]: 
+            - link "" [ref=e250] [cursor=pointer]:
+              - /url: https://twitter.com/renfe
+              - generic [ref=e251]: 
+            - link "" [ref=e253] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/renfe
+              - generic [ref=e254]: 
+            - link "" [ref=e256] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/renfe/
+              - generic [ref=e257]: 
+        - generic [ref=e258]:
+          - list [ref=e259]:
+            - listitem [ref=e260]:
+              - link "Cercanías" [ref=e261] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias
+            - listitem [ref=e262]:
+              - link "Asturias" [ref=e263] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-asturias
+            - listitem [ref=e264]:
+              - link "Bilbao" [ref=e265] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-bilbao
+            - listitem [ref=e266]:
+              - link "Cádiz" [ref=e267] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-cadiz
+            - listitem [ref=e268]:
+              - link "Cantabria" [ref=e269] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-cantabria
+            - listitem [ref=e270]:
+              - link "Madrid" [ref=e271] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-madrid
+            - listitem [ref=e272]:
+              - link "Málaga" [ref=e273] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-malaga
+            - listitem [ref=e274]:
+              - link "Murcia/Alicante" [ref=e275] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/cercanias-murcia-alicante
+            - listitem [ref=e276]:
+              - link "Rodalies Catalunya" [ref=e277] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/cercanias/rodalies-catalunya
+            - listitem [ref=e278]:
+              - link "Ver más" [ref=e279] [cursor=pointer]:
+                - /url: "#"
+          - list [ref=e280]:
+            - listitem [ref=e281]:
+              - link "Ayuda" [ref=e282] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda
+            - listitem [ref=e283]:
+              - link "Cambiar billete" [ref=e284] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/cambiar-billete
+            - listitem [ref=e285]:
+              - link "Anular billete" [ref=e286] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/anular-billete
+            - listitem [ref=e287]:
+              - link "Cercanías" [ref=e288] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/cercanias
+            - listitem [ref=e289]:
+              - link "FAQs" [ref=e290] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/faqs
+            - listitem [ref=e291]:
+              - link "Objetos perdidos" [ref=e292] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/objetos-perdidos
+            - listitem [ref=e293]:
+              - link "Teléfonos de atención de Renfe" [ref=e294] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/telefonos-atencion-renfe
+            - listitem [ref=e295]:
+              - link "Contactar con Renfe" [ref=e296] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/contactar-renfe
+            - listitem [ref=e297]:
+              - link "Compromiso de puntualidad" [ref=e298] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/ayuda/compromiso-puntualidad
+            - listitem [ref=e299]:
+              - link "Ver más" [ref=e300] [cursor=pointer]:
+                - /url: "#"
+          - list [ref=e301]:
+            - listitem [ref=e302]:
+              - link "Apps y Webs" [ref=e303] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/viajar/informacion-util/aplicaciones
+            - listitem [ref=e304]:
+              - link "Renfe" [ref=e305] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfeviajeros.ticket&hl=es
+            - listitem [ref=e306]:
+              - link "Renfe Cercanías" [ref=e307] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfe.renfecercanias&hl=es
+            - listitem [ref=e308]:
+              - link "Play Renfe" [ref=e309] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfe.playrenfe&hl=es
+            - listitem [ref=e310]:
+              - link "Renfe Asistencia" [ref=e311] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.renfe.renfeatendo&hl=es
+            - listitem [ref=e312]:
+              - link "Renfe viajes" [ref=e313] [cursor=pointer]:
+                - /url: https://renfeviajes.renfe.com
+            - listitem [ref=e314]:
+              - link "Club Renfe" [ref=e315] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/revista-club
+            - listitem [ref=e316]:
+              - link "Blog Renfe" [ref=e317] [cursor=pointer]:
+                - /url: https://blog.renfe.com/
+            - listitem [ref=e318]:
+              - link "Dōcō Mobility" [ref=e319] [cursor=pointer]:
+                - /url: https://www.docomobility.com/
+          - list [ref=e320]:
+            - listitem [ref=e321]:
+              - link "Agencias" [ref=e322] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/grupo-renfe/sociedades/renfe-viajeros/anuncio-agencias
+            - listitem [ref=e323]:
+              - link "Renfe Agencias" [ref=e324] [cursor=pointer]:
+                - /url: https://www.renfe.com/es/es/grupo-renfe/sociedades/renfe-viajeros/anuncio-agencias
+      - generic [ref=e329]:
+        - list [ref=e330]:
+          - listitem [ref=e331]:
+            - link "Información legal" [ref=e332] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros
+          - listitem [ref=e333]:
+            - link "Política de Privacidad y Cookies" [ref=e334] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros/privacidad-cookies
+          - listitem [ref=e335]:
+            - link "Accesibilidad web" [ref=e336] [cursor=pointer]:
+              - /url: https://www.renfe.com/es/es/ayuda/informacion-legal-viajeros/accesibilidad-web
+        - generic [ref=e337]:
+          - generic [ref=e338]: © Renfe - Todos los derechos reservados
+          - link [ref=e340] [cursor=pointer]:
+            - /url: https://www.mitma.gob.es/
+            - figure [ref=e341]
+  - text:   
+  - generic: 
+```
