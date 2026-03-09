@@ -1,0 +1,17 @@
+Waiting for ticket results...
+Attempt 1: Found 1 tickets
+Attempt 1: Found 1 tickets. Searching for ticket in price range 50-60€
+Found ticket with price: 106.7€
+No ticket found in range, clicking to load next day...
+Attempt 2: Found 2 tickets. Searching for ticket in price range 50-60€
+Found ticket with price: 86.5€
+Found ticket with price: 95.3€
+No ticket found in range, clicking to load next day...
+Attempt 3: Found 2 tickets. Searching for ticket in price range 50-60€
+Found ticket with price: 86.5€
+Found ticket with price: 95.3€
+No ticket found in range, clicking to load next day...
+Attempt 4: Found 2 tickets. Searching for ticket in price range 50-60€
+Found ticket with price: 86.5€
+Found ticket with price: 106.7€
+No ticket found in range, clicking to load next day...

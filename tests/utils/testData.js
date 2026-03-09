@@ -30,6 +30,13 @@ export const TEST_DATA = {
 
 };
 
+export const STATIONS = {
+    STATION_1 : 'Madrid-Atocha Cercanías',
+    STATION_2 : 'Barcelona-Sants',
+    STATION_3 : 'Valencia-Joaquín Sorolla',
+    STATION_4 : 'Sevilla-Santa Justa',
+}
+
 /** Wait for element with retry logic
 * @param {Page} page - Playwright Page object
 * @param {string} selector - CSS selector
