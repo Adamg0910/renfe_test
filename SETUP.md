@@ -55,6 +55,8 @@ renfe_test/
 
 - Git (for version control)
 
+- VS Code 1.95.0 or higher (recommended for GitHub Copilot compatibility)
+
  
 
 ### Step 1: Install Dependencies
@@ -70,6 +72,26 @@ This will install
 npx playwright install
 ```
 This downloads browser binaries for Chromium, Firefox, and WebKit.
+
+### Step 3: Set Up VS Code (Recommended)
+This project includes VS Code workspace configuration for optimal development experience.
+
+**Install Recommended Extensions**:
+1. Open the project in VS Code
+2. When prompted, click "Install" to install recommended extensions:
+   - GitHub Copilot (AI code assistance)
+   - Playwright Test for VS Code (test running and debugging)
+
+**Or install manually**:
+- Press Ctrl+Shift+X (Cmd+Shift+X on Mac)
+- Search for "GitHub Copilot" and "Playwright Test"
+- Install both extensions
+
+**Verify Copilot Setup**:
+- Check the Copilot icon in the bottom-right status bar
+- It should show as enabled (not disabled or error state)
+- If you see compatibility warnings, ensure VS Code is version 1.95.0 or higher
+
 
 ## Running Tests
 
@@ -168,6 +190,22 @@ Tests run on three browsers by default:
 Configure in `playwright.config.js` if needed.
 
 ## Troubleshooting
+
+### Issue: VS Code and GitHub Copilot Compatibility
+**Problem**: VS Code version 1.109.0 or certain versions have known issues with GitHub Copilot
+
+**Solutions**:
+1. **Update VS Code**: Ensure you're running VS Code version 1.95.0 or higher
+   - Download from: https://code.visualstudio.com/
+   - Or use your OS package manager to update
+2. **Update GitHub Copilot Extension**:
+   - Open VS Code Extensions panel (Ctrl+Shift+X / Cmd+Shift+X)
+   - Search for "GitHub Copilot"
+   - Click "Update" if available
+3. **Reload VS Code**: After updating, reload the window (Ctrl+Shift+P / Cmd+Shift+P → "Reload Window")
+4. **Check Extension Status**: Ensure Copilot shows as "Enabled" in the status bar
+5. **Use Workspace Settings**: This project includes `.vscode/settings.json` with recommended Copilot configurations
+
 ### Issue: "getaddrinfo ENOTFOUND registry.npmjs.org"
 **Solution**: Check internet connectivity or configure npm proxy
 ### Issue: "Playwright browser not found"
